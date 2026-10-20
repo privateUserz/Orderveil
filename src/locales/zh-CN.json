@@ -1,0 +1,1484 @@
+{
+  "brand": {
+    "tagline": "保护交易意图，让执行更加公平。",
+    "taglineLong": "受保护交易排序与 MEV 研究基础设施。保护交易意图，让执行更加公平。",
+    "disclaimer": "Orderveil 是参考 BNB Chain NewL1 公开技术提案构建的独立研究项目，并非 BNB Chain 官方项目，也未获得官方背书。"
+  },
+  "common": {
+    "simulation": "模拟",
+    "simulationTooltip": "由 Orderveil 模拟引擎在你的浏览器本地计算，不是测试网或主网结果。",
+    "soon": "即将推出",
+    "loading": "加载中…",
+    "copy": "复制到剪贴板",
+    "learnMore": "了解更多",
+    "tick": "Tick",
+    "close": "关闭",
+    "off": "关闭"
+  },
+  "nav": {
+    "home": "首页",
+    "technology": "技术",
+    "playground": "实验场",
+    "network": "网络拓扑",
+    "docs": "文档",
+    "language": "语言",
+    "connectWallet": "连接钱包",
+    "homeAria": "Orderveil 首页",
+    "primary": "主导航",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "skip": "跳到正文"
+  },
+  "meta": {
+    "home": {
+      "title": "Orderveil — 受保护交易排序研究",
+      "description": "探索受 BNB Chain NewL1 启发的 MEV 感知执行、确定性排序与受保护订单流。"
+    },
+    "technology": {
+      "title": "技术",
+      "description": "Orderveil 如何把 BNB Chain NewL1 的 TEE Gateway 提案映射为可复现的排序模拟。"
+    },
+    "playground": {
+      "title": "MEV 实验场",
+      "description": "在公开、受保护和 Opt-in 三种排序下运行恒定乘积 AMM 实验，并导出审计记录。"
+    },
+    "network": {
+      "title": "网络拓扑",
+      "description": "模拟网关的交互式拓扑：入口、分类、排序、SubBlock 与验证。"
+    },
+    "docs": {
+      "title": "文档",
+      "description": "Orderveil Gateway Lab 的模拟模型、AMM 数学、排序规则、审计记录与局限。"
+    },
+    "notFound": {
+      "title": "页面不存在"
+    }
+  },
+  "notFound": {
+    "code": "未找到路由",
+    "title": "这个路由不在实验范围内。",
+    "text": "你访问的页面不存在。模拟和文档都还在原处。",
+    "home": "返回首页"
+  },
+  "footer": {
+    "pillars": {
+      "privacy": {
+        "title": "默认隐私保护",
+        "text": "受保护路径，无 Hint"
+      },
+      "deterministic": {
+        "title": "确定性",
+        "text": "相同输入，相同顺序"
+      },
+      "composable": {
+        "title": "可重放",
+        "text": "导出、导入、验证"
+      },
+      "research": {
+        "title": "开放研究",
+        "text": "假设全部公开"
+      }
+    },
+    "tokenNote": "预留的未来代币名称：Orderveil（ORVL）。未部署、不出售，与 BNB Chain 无关。",
+    "navigation": "导航",
+    "documentation": "文档",
+    "sourceNote": "源码仓库链接将在公开后补充。",
+    "references": "官方研究资料",
+    "simulationOnly": "本地模拟 · 可选 BSC 测试网存证"
+  },
+  "references": {
+    "teeGateway": {
+      "short": "NewL1 MEV 方案 — TEE Gateway",
+      "kind": "技术提案",
+      "title": "Introducing NewL1 MEV Solution — TEE Gateway",
+      "summary": "在可证明的 VM 型 TEE 内完成加密交易入口、确定性排序、连续 SubBlock 流和最终区块打包；交易默认私密，用户可选择授权 after-ref backrun。"
+    },
+    "newl1About": {
+      "short": "关于 BNB Chain NewL1 板块",
+      "kind": "官方介绍",
+      "title": "About the BNB Chain NewL1 category",
+      "summary": "NewL1 是 BNB Chain 家族中面向交易、支付、隐私和 AI 的垂直优化、EVM 兼容 L1，与 BSC 并行互补；BNB 为原生代币，不会发行新代币。"
+    }
+  },
+  "paths": {
+    "public": "公开",
+    "protected": "受保护",
+    "optin": "Opt-in"
+  },
+  "roles": {
+    "user": "你的交易",
+    "attacker": "攻击者",
+    "searcher": "Searcher backrun",
+    "background": "其他订单流",
+    "start": "起点"
+  },
+  "status": {
+    "executed": "已执行",
+    "reverted": "已回滚",
+    "excluded": "已排除",
+    "missing": "缺失",
+    "pending": "处理中"
+  },
+  "reasons": {
+    "SLIPPAGE_EXCEEDED": "超过滑点限制",
+    "INSUFFICIENT_OUTPUT_AMOUNT": "输出取整后为零",
+    "NO_BALANCE": "没有可用余额"
+  },
+  "bundleStatus": {
+    "candidate": "候选",
+    "included": "已纳入",
+    "outbid": "出价被超过",
+    "excluded_on_execution": "已排除（回滚）",
+    "rejected_before_ref": "拒绝：before-ref",
+    "rejected_no_target": "拒绝：无目标",
+    "rejected_protected_target": "拒绝：受保护目标",
+    "rejected_unknown_target": "拒绝：未知目标",
+    "rejected_empty": "拒绝：空 bundle",
+    "rejected_before_disclosure": "拒绝：早于披露",
+    "rejected_late": "拒绝：提交过晚",
+    "rejected_validity_window": "拒绝：有效期窗口",
+    "rejected_tip_floor": "拒绝：低于 tip 下限",
+    "rejected_malformed": "拒绝：格式错误"
+  },
+  "errors": {
+    "title": "当前输入无法运行模拟",
+    "unknown": "输入出现意外错误。",
+    "paramsInvalid": "当前实验场参数无效，请在实验场中修正后查看结果。",
+    "invalidNumber": "请输入非负的十进制数字。",
+    "tooPrecise": "小数位过多（最多 18 位）。",
+    "invalidPercent": "请输入最多两位小数的百分比。",
+    "outOfRange": "数值超出允许范围。",
+    "invalidInteger": "请输入整数。",
+    "zeroAmount": "数量必须大于零。",
+    "invalidLiquidity": "池子储备必须大于零。",
+    "invalidSeed": "种子长度需为 1–64 个字符。",
+    "invalidMode": "未知的执行模式。",
+    "invalidDirection": "未知的交易方向。",
+    "invalidGuess": "未知的盲猜选项。",
+    "INVALID_LIQUIDITY": "池子储备必须大于零。",
+    "ZERO_AMOUNT": "数量必须大于零。",
+    "pageTitle": "页面加载失败",
+    "pageText": "渲染这个页面时出错了。通常刷新一下就能恢复，实验参数会保留。",
+    "staleTitle": "网站刚刚更新过",
+    "staleText": "当前标签页运行的是旧版本，刷新即可获取最新版本，实验参数会保留。",
+    "reload": "刷新页面"
+  },
+  "charts": {
+    "priceTimelineAria": "折线图：按执行顺序，每笔交易后池子的现货价格。",
+    "spotPrice": "现货价格（USDT/BNB）",
+    "start": "初始池子",
+    "failedStep": "回滚 / 排除",
+    "execPriceAria": "柱状图：各模式下有无攻击者时用户的成交价格对比。",
+    "quoted": "提交时报价",
+    "withAdversary": "有攻击者",
+    "baseline": "无攻击者",
+    "timelineNote": "每个点是一笔交易执行后的池子现货价格，顺序由排序引擎决定。失败的交易不改变价格。"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Gateway Lab · 研究平台",
+      "title": "更公平的交易层。",
+      "subtitle": "探索受保护交易排序、私有订单流与 MEV 感知的交易执行。",
+      "inspired": "灵感来自 BNB Chain NewL1 的 TEE Gateway 研究。",
+      "ctaPrimary": "进入 Gateway Lab",
+      "ctaSecondary": "阅读文档",
+      "caption": "本站所有数字都由本地、可重放的模拟计算得出。",
+      "art": {
+        "aria": "等距示意图：用户交易经过加密入口和链下网关（此处为模拟）到达验证者；审计记录可以存证到 BSC 测试网。",
+        "user": "用户",
+        "ingress": "加密入口",
+        "ingressSub": "受保护 / Opt-in",
+        "gateway": "Gateway",
+        "gatewaySub": "（链下 · 模拟）",
+        "validator": "验证者",
+        "bsc": "BSC 测试网",
+        "bscSub": "第二阶段 · 审计存证"
+      }
+    },
+    "capabilities": {
+      "aria": "核心能力",
+      "items": {
+        "protected": {
+          "title": "受保护订单流",
+          "text": "默认路径：不发 Hint，不允许 after-ref 引用。"
+        },
+        "deterministic": {
+          "title": "确定性排序",
+          "text": "先按费率，平局用 H(txHash‖salt)。"
+        },
+        "mev": {
+          "title": "MEV 研究",
+          "text": "真实恒定乘积计算，而非固定百分比。"
+        },
+        "subblock": {
+          "title": "SubBlock 流",
+          "text": "20ms 逻辑 Tick，按父哈希串联。"
+        },
+        "audit": {
+          "title": "可重放审计",
+          "text": "导出记录、重新运行、逐一比对哈希。"
+        }
+      }
+    },
+    "how": {
+      "title": "工作原理",
+      "subtitle": "用户 → 加密入口 → 排序引擎 → 验证者 → 结算",
+      "note": "参照提案架构建模。在 Orderveil 中，每个方框都是本地模拟的一个步骤，并非已部署的服务。",
+      "columns": {
+        "users": {
+          "title": "用户",
+          "sub": "提交交易意图",
+          "items": {
+            "swap": "兑换",
+            "transfer": "转账",
+            "defi": "DeFi 交互"
+          }
+        },
+        "gateway": {
+          "title": "TEE Gateway",
+          "sub": "提案：可证明的排序服务",
+          "items": {
+            "encrypt": "加密入口",
+            "order": "确定性排序",
+            "subblocks": "生成 SubBlock",
+            "signed": "签名输出（enclaveSig）"
+          }
+        },
+        "validators": {
+          "title": "验证者",
+          "sub": "保留最终签名权",
+          "items": {
+            "verify": "验证排序与证明",
+            "propose": "提议区块"
+          }
+        }
+      }
+    },
+    "topology": {
+      "title": "网络拓扑",
+      "open": "打开完整拓扑",
+      "done": "{{ticks}} 个 Tick 中共排序 {{count}} 笔交易"
+    },
+    "settlement": {
+      "title": "链上结算流程",
+      "sub": "实验生命周期",
+      "detail": "查看详细流程",
+      "note": "这里的“结算”指更新模拟 AMM 池状态。唯一的链上步骤是可选的：把审计记录存证到 BSC 测试网。",
+      "steps": {
+        "submit": {
+          "title": "提交",
+          "text": "交易经受保护或 Opt-in 路径进入入口。"
+        },
+        "order": {
+          "title": "排序",
+          "text": "按公开、带版本号的规则对每个 Tick 的冻结集排序。"
+        },
+        "execute": {
+          "title": "执行",
+          "text": "已排序的 SubBlock 依次在 AMM 状态上执行。"
+        },
+        "settle": {
+          "title": "结算",
+          "text": "得到最终储备、余额和可导出的审计记录。"
+        }
+      }
+    },
+    "subblocks": {
+      "title": "SubBlock 日志",
+      "more": "在网络拓扑中查看",
+      "empty": "暂无 SubBlock",
+      "cols": {
+        "hash": "SubBlock",
+        "tick": "Tick",
+        "txs": "交易数",
+        "content": "内容",
+        "time": "逻辑时间"
+      },
+      "withBackrun": "After-ref backrun",
+      "logicalMs": "{{ms}} ms",
+      "note": "由排序引擎针对当前 Opt-in 实验即时生成。哈希是 SHA-256 模拟承诺，不是链上数据。"
+    },
+    "compare": {
+      "title": "效果对比",
+      "subtitle": "同一笔交易、同一个池子、同一个攻击者 —— 使用当前实验场参数（种子 “{{seed}}”）。",
+      "more": "在实验场查看完整数据",
+      "fix": "打开实验场",
+      "public": {
+        "title": "公开内存池",
+        "sub": "攻击者能看到交易"
+      },
+      "protected": {
+        "title": "受 Gateway 保护",
+        "sub": "攻击者只能盲猜"
+      },
+      "userStatus": "你的交易",
+      "priceImpact": "你的价格影响",
+      "mevLoss": "对比无攻击者",
+      "benefits": {
+        "title": "核心优势",
+        "items": {
+          "reduce": {
+            "title": "减少 MEV 损失",
+            "text": "排序前隐藏交易意图。"
+          },
+          "fair": {
+            "title": "公平透明的排序",
+            "text": "公开规则，无人工裁量。"
+          },
+          "better": {
+            "title": "用户授权的价值",
+            "text": "Opt-in backrun 可以向用户返还收益。"
+          },
+          "open": {
+            "title": "任何人可重放",
+            "text": "承诺让审计变成机械化检查。"
+          }
+        }
+      },
+      "cta": "打开实验场",
+      "disclaimer": "结果完全取决于模型假设。受保护排序不保证更好的成交价：正如提案本身所述，盲目提交的高费率抢跑交易仍可能碰巧伤害用户。"
+    },
+    "research": {
+      "eyebrow": "研究基础",
+      "title": "探索 BNB Chain NewL1",
+      "subtitle": "Orderveil 以 NewL1 公开的 TEE Gateway 提案为起点，把其中的排序规则变成任何人都能运行、检查和重放的实验。",
+      "relationTitle": "Orderveil 与提案的关系",
+      "relation": [
+        {
+          "ok": true,
+          "text": "以确定性 JavaScript 引擎实现提案公开的排序规则：按费率排序、H(txHash‖salt) 打破平局、Opt-in 延迟 5 个 Tick、只允许 after-ref。"
+        },
+        {
+          "ok": true,
+          "text": "记录 SubBlock 字段、输入承诺和 payload 哈希，使每次实验都能被重放和验证。"
+        },
+        {
+          "ok": false,
+          "text": "不运行 TEE，不生成证明或 enclaveSig，也不连接 NewL1。这些属于提案层面的功能，本站只做描述。"
+        },
+        {
+          "ok": false,
+          "text": "对提案未明确的细节（salt 推导、哈希函数、返还比例）采用明确标注的 Orderveil 实验选择。"
+        }
+      ]
+    }
+  },
+  "topology": {
+    "ariaLabel": "模拟网关的交互式网络拓扑",
+    "futureTag": "未来集成",
+    "layers": {
+      "user": "用户层",
+      "ingress": "交易入口",
+      "gateway": "网关层",
+      "validator": "验证者层",
+      "settlement": "结算层"
+    },
+    "nodes": {
+      "walletA": {
+        "label": "钱包 A",
+        "short": "实验中你的交易",
+        "desc": "代表被研究的用户。模拟中它只提交一笔兑换交易（transactionId 为 “user”）。"
+      },
+      "walletB": {
+        "label": "钱包 B",
+        "short": "其他订单流",
+        "desc": "代表其他用户。模拟根据种子确定性地生成他们的兑换（规模、方向、费率、到达 Tick）。"
+      },
+      "walletC": {
+        "label": "钱包 C",
+        "short": "攻击者或 searcher",
+        "desc": "代表 MEV 参与者：公开路径上的三明治攻击者、网关路径上盲猜或读取 Hint 的交易者，以及 Opt-in 路径上的 backrun searcher。"
+      },
+      "ingress": {
+        "label": "加密入口",
+        "short": "接收交易",
+        "desc": "在提案中，交易只在 TEE 内解密。Orderveil 模拟的是信息边界（谁能看到什么），并不实际加密；这里没有 TEE。",
+        "source": "提案 §3.1 — Encrypted ingress"
+      },
+      "classifier": {
+        "label": "交易分类器",
+        "short": "受保护 / Opt-in",
+        "desc": "把每笔交易路由到受保护路径（默认）或 Opt-in 延迟路径。只有 Opt-in 交易会产生 Hint 和 targetCommitment。",
+        "source": "提案 §3.1 — Classifier；§4.1"
+      },
+      "protectedQueue": {
+        "label": "受保护队列",
+        "short": "无 Hint，无 after-ref",
+        "desc": "默认路径。内容从不向模拟 searcher 披露，也不能被 bundle 引用。交易进入其到达的 Tick。",
+        "source": "提案 §4.1 — Protected path"
+      },
+      "optinQueue": {
+        "label": "Opt-in 队列",
+        "short": "5 个 Tick 披露窗口",
+        "desc": "用户授权的路径。未签名交易体作为 Hint 发布，纳入时间延迟 5 个 Tick（约 100ms 逻辑时间），供 searcher 提交 after-ref backrun。",
+        "source": "提案 §4.1、§4.2"
+      },
+      "ordering": {
+        "label": "确定性排序引擎",
+        "short": "费率优先，再 H(txHash‖salt)",
+        "desc": "对每个 Tick 的冻结集按有效费率降序排序，平局用 SHA-256(txHash‖salt) 打破，保持发送者 nonce 顺序，并把最优 after-ref bundle 紧接在目标之后。",
+        "source": "提案 §4.1 — General、After-ref"
+      },
+      "subblock": {
+        "label": "SubBlock 生成器",
+        "short": "逐 Tick 串联",
+        "desc": "把每个 Tick 的输出绑定到 gatewayId、workloadId、rulesetVersion、term、slot、tick、parentSubBlockHash、inputCommitment 和 payloadHash。因为没有 TEE，不生成 enclaveSig。",
+        "source": "提案 §3.2 — Data boundaries"
+      },
+      "packaging": {
+        "label": "区块打包",
+        "short": "按顺序拼接",
+        "desc": "按确认顺序把 SubBlock 拼接成最终序列交给 AMM 执行。不能删除、插入或重排交易。",
+        "source": "提案 §3.1 — Block packager"
+      },
+      "validator": {
+        "label": "验证者",
+        "short": "概念性验证",
+        "desc": "在提案中，验证者负责验证、签名和提议区块。这里是概念性的：模拟执行打包后的顺序并报告结果，不模拟共识。",
+        "source": "提案 §00、§07"
+      },
+      "settlementContract": {
+        "label": "存证合约",
+        "short": "审计存证",
+        "desc": "部署在 BSC 测试网上的 OrderveilCommitments。可以在实验场的“审计与重放”中用钱包把实验的记录摘要、最终 SubBlock 哈希和执行哈希发布到这里。它只记录存证，不结算交易。"
+      },
+      "bscTestnet": {
+        "label": "BSC 测试网",
+        "short": "链 ID 97",
+        "desc": "仅用于审计存证（链 ID 97）。实验中的交易不会发送到 BSC，Orderveil 也不影响 BSC 的排序。"
+      }
+    },
+    "testnetTag": "BSC 测试网"
+  },
+  "network": {
+    "eyebrow": "网络拓扑",
+    "title": "由排序引擎驱动的网关拓扑",
+    "subtitle": "运行一轮实验，跟随它经过入口、分类、排序、SubBlock 生成和验证。高亮和计数都来自排序引擎针对当前实验场参数的实际输出。",
+    "path": "用户路径",
+    "runRound": "运行一轮",
+    "runAgain": "再次运行",
+    "step": "单步",
+    "resetRun": "重置",
+    "resetView": "重置视图",
+    "stageLabel": "阶段",
+    "stages": {
+      "idle": "空闲",
+      "received": "已接收",
+      "classified": "已分类",
+      "ordered": "已排序",
+      "packaged": "已打包",
+      "completed": "已完成"
+    },
+    "stageText": {
+      "idle": "就绪。选择一条路径并运行一轮，实验使用实验场中的参数。",
+      "received": "入口在 Tick {{firstTick}}–{{lastTick}} 期间接收了 {{txCount}} 笔交易和 {{bundleCount}} 个 after-ref bundle。",
+      "classified": "分类器把 {{protectedCount}} 笔交易路由到受保护路径，{{optinCount}} 笔到 Opt-in 路径；发布了 {{hintCount}} 个 Hint。",
+      "ordered": "排序引擎给出了 {{orderedCount}} 笔交易的确定性顺序；放置了 {{includedBundles}} 个 after-ref bundle。",
+      "packaged": "生成了 {{tickCount}} 个 SubBlock（{{nonEmptyTicks}} 个非空），按父哈希串联。最终哈希 {{finalHash}}…",
+      "completed": "已在模拟 AMM 上执行。你的交易：{{userStatus}}。{{failed}} 笔交易未执行。"
+    },
+    "statusTitle": "实验状态",
+    "inputs": "输入",
+    "inputsValue": "{{txs}} 笔交易 · {{bundles}} 个 bundle",
+    "ticks": "逻辑 Tick",
+    "seed": "种子",
+    "clickHint": "点击任意节点，查看它的作用以及本次实验中它持有的数据。拖动可平移，滚轮或控件可缩放。",
+    "legend": "节点描述的是实验架构，不涉及任何服务器、TEE 或链。",
+    "legendActive": "当前阶段活跃",
+    "legendFuture": "可选的测试网步骤（不在模拟轮次内）",
+    "subblocksTitle": "Tick 与 SubBlock",
+    "subblocksSub": "每 20ms 逻辑 Tick 一个 SubBlock。高亮的 Tick 包含你的交易。",
+    "orderTitle": "排序结果",
+    "orderSub": "跨所有 SubBlock 的最终执行顺序。",
+    "orderPending": "将实验运行到“已排序”阶段以查看结果。",
+    "data": {
+      "transactions": "交易",
+      "bundles": "Bundle",
+      "received": "接收条目",
+      "queued": "队列中",
+      "hints": "已发布 Hint",
+      "rule": "主规则",
+      "tieBreak": "平局规则",
+      "ordered": "已排序交易",
+      "bundleResult": "Bundle 结果",
+      "subblocks": "SubBlock 数",
+      "range": "范围",
+      "packaged": "打包内容",
+      "packagedValue": "来自 {{sb}} 个 SubBlock 的 {{txs}} 笔交易",
+      "userStatus": "你的交易",
+      "failed": "未执行",
+      "status": "状态",
+      "contract": "合约",
+      "notDeployed": "未配置"
+    }
+  },
+  "playground": {
+    "eyebrow": "MEV 实验场",
+    "title": "同一笔交易，三种排序模型",
+    "subtitle": "一个恒定乘积 AMM、一个确定性排序引擎和一个攻击者。修改任何输入，所有数字、图表和哈希都会重新计算。",
+    "tabs": {
+      "label": "实验场视图",
+      "results": "结果",
+      "compare": "公开 vs 受保护",
+      "ordering": "排序与 Tick",
+      "audit": "审计与重放"
+    },
+    "sections": {
+      "outcome": "结果 · {{mode}}",
+      "outcomeSub": "所有金额均为模拟",
+      "timeline": "池子价格时间线",
+      "timelineSub": "每一步后的现货价格",
+      "execPrice": "各模式成交价格",
+      "execPriceSub": "买入时越低越好",
+      "sequence": "攻击序列",
+      "sequenceSub": "执行顺序与结果",
+      "assumptions": "模型假设与局限",
+      "ticks": "Tick 模拟",
+      "ticksSub": "20ms 逻辑 Tick",
+      "ordering": "交易排序",
+      "orderingSub": "最终顺序与费率",
+      "audit": "审计记录与重放",
+      "auditSub": "确定性，SHA-256 承诺"
+    },
+    "params": {
+      "title": "实验输入",
+      "reset": "重置",
+      "exampleNote": "初始值仅为示例，并非市场数据。基础代币类似 BNB，计价代币类似 USDT，均为 18 位小数。",
+      "groupTrade": "你的交易",
+      "direction": "交易方向",
+      "buy": "买入",
+      "sell": "卖出",
+      "tradeAmount": "交易数量",
+      "slippagePercent": "滑点容忍度",
+      "slippageHint": "相对提交时报价",
+      "groupPool": "流动性池",
+      "poolBase": "基础代币储备",
+      "poolQuote": "计价代币储备",
+      "feePercent": "兑换手续费",
+      "feeHint": "留在池中",
+      "groupAdversary": "攻击者",
+      "attackerEnabled": "启用攻击者",
+      "attackerDesc": "公开：看到你的交易并三明治攻击。受保护：只能盲猜。Opt-in：读取 Hint。",
+      "attackerAmount": "攻击者交易数量",
+      "sizeToMax": "按你的滑点上限计算最大规模",
+      "blindGuess": "盲猜方向（受保护路径）",
+      "guess": {
+        "seed": "由种子决定",
+        "same": "与你相同（最坏情况）",
+        "opposite": "与你相反"
+      },
+      "groupExecution": "执行",
+      "mode": "执行模式",
+      "seed": "模拟种子",
+      "seedHint": "决定所有生成的订单流",
+      "userFeeGwei": "你的有效费率",
+      "groupAdvanced": "高级假设",
+      "gasUnits": "每笔兑换 Gas",
+      "backgroundTxCount": "其他交易数",
+      "searcherCount": "Searcher 数",
+      "refundPercent": "Tip 返还给用户",
+      "advancedNote": "Gas 和返还比例是模拟假设。提案没有规定订单流返还比例，初始分成为验证者 75% / 网关 25%。"
+    },
+    "metrics": {
+      "userTx": "你的交易",
+      "position": "第 {{n}} 位",
+      "userInput": "用户输入",
+      "direction": "方向：{{dir}}",
+      "userOutput": "用户获得",
+      "quoted": "报价 {{v}}",
+      "execPrice": "成交价格",
+      "spotBefore": "之前现价 {{v}}",
+      "priceImpact": "价格影响",
+      "quotedImpact": "报价时 {{v}}",
+      "slippage": "相对报价的滑点",
+      "minOut": "最少获得 {{v}}",
+      "mevLoss": "MEV 相关损失",
+      "failedByAdversary": "交易失败",
+      "mevLossSub": "对比同一次运行去掉攻击者",
+      "refund": "Opt-in 返还",
+      "refundSub": "胜出 tip 的 {{pct}}%",
+      "userGas": "你的 Gas 成本",
+      "gasSub": "模拟 Gas × 费率",
+      "attacker": "攻击者盈亏",
+      "noAttacker": "本次运行没有攻击者。",
+      "gross": "交易毛盈亏",
+      "lpFees": "已付 AMM 手续费（已含）",
+      "gas": "模拟 Gas",
+      "net": "净收益",
+      "blindGuess": "盲猜",
+      "guessRight": "与你方向一致",
+      "guessWrong": "与你方向不一致",
+      "reserves": "池子储备",
+      "before": "之前",
+      "after": "之后",
+      "reservesNote": "本次运行全部 {{count}} 步之后，包含其他订单流。"
+    },
+    "strategy": {
+      "sandwich": "三明治攻击（看到你的交易）",
+      "blind-front-leg": "盲目高费率抢跑",
+      "informed-front-leg": "基于 Hint 的抢跑"
+    },
+    "ordering": {
+      "caption": "按最终执行顺序排列的交易",
+      "tx": "交易",
+      "hash": "txHash",
+      "fee": "费率 (gwei)",
+      "side": "方向",
+      "in": "输入",
+      "out": "输出",
+      "status": "状态",
+      "afterRef": "after-ref"
+    },
+    "ticks": {
+      "publicTitle": "公开路径没有 Tick",
+      "publicText": "公开模型是在完全可见的内存池中按费率排序的一个区块。切换到“受保护”或 “Opt-in” 以查看网关 Tick 和 SubBlock。",
+      "aria": "Tick 列表",
+      "inputs": "Tick {{tick}} —— 输入与输出",
+      "arrivals": "到达",
+      "bundleArrivals": "到达的 bundle",
+      "frozen": "冻结集",
+      "salt": "Salt",
+      "output": "输出批次（已排序）",
+      "emptyTick": "空 Tick —— 空 SubBlock 仍会延续链条。",
+      "subblock": "SubBlock 头",
+      "noEnclaveSig": "不生成（无 TEE）",
+      "hints": "Opt-in Hint",
+      "window": "披露窗口",
+      "disclosed": "披露内容",
+      "disclosedValue": "未签名交易体：发送者、nonce、费率、payload",
+      "hintsNote": "受保护交易从不出现在这里。Searcher 引用的是承诺，而不是已签名的哈希。",
+      "bundles": "After-ref 竞争",
+      "noBundles": "没有提交 bundle。",
+      "tip": "tip {{v}} BNB",
+      "bundlesNote": "承诺 tip 最高者胜出；平局用 SHA-256(bundleHash‖salt)。每个目标最多一个 backrun。"
+    },
+    "compare": {
+      "public": {
+        "title": "公开交易流程",
+        "sub": "所有人可见的内存池"
+      },
+      "protected": {
+        "title": "受保护交易流程",
+        "sub": "网关，默认私密"
+      },
+      "order": "执行顺序",
+      "received": "你获得",
+      "attackerNet": "攻击者净收益",
+      "fees": "总 Gas（所有交易）",
+      "pool": "初始池子",
+      "adversary": "攻击规模",
+      "sharedInputs": "两侧输入完全相同",
+      "caveatTitle": "请结合模型理解这些结果",
+      "caveats": [
+        "结果取决于你选择的种子、规模和费率。受保护排序不保证更好的价格。",
+        "在受保护路径上，攻击者看不到你的交易，但同方向的盲目高费率交易仍可能碰巧伤害你（提案 §05 中的残余风险）。",
+        "公开路径假设攻击者信息完全且总能赢得费率优先权；真实攻击者会面临竞争、延迟和失败。",
+        "MEV 相关损失是与同一次运行去掉攻击者后对比得出的，因此其他用户造成的正常价格影响不计入 MEV。"
+      ]
+    },
+    "audit": {
+      "passed": "重放通过",
+      "failed": "重放失败",
+      "loadParams": "载入这些参数",
+      "checks": {
+        "structure": "记录结构",
+        "rulesetVersion": "规则版本受支持",
+        "rulesetParameters": "规则参数",
+        "transactionHashes": "交易与 bundle 哈希",
+        "inputsFromParameters": "输入可由参数重新生成",
+        "experimentId": "实验 ID",
+        "tickRange": "Tick 范围",
+        "salt": "每个 Tick 的 Salt",
+        "frozenSets": "冻结集",
+        "inputCommitment": "输入承诺",
+        "ordering": "排序结果",
+        "payloadHash": "Payload 哈希",
+        "subBlockChain": "SubBlock 链",
+        "bundleDecisions": "Bundle 决策",
+        "hints": "Hint",
+        "finalOrder": "最终顺序",
+        "execution": "AMM 执行",
+        "simulationSignature": "本地签名"
+      },
+      "ok": "一致",
+      "mismatch": "不一致",
+      "recordTitle": "当前实验记录",
+      "inputs": "输入",
+      "inputsValue": "{{txs}} 笔交易 · {{bundles}} 个 bundle",
+      "sigScope": "本地 ed25519，不是 TEE",
+      "export": "导出 JSON",
+      "replayCurrent": "重放当前实验",
+      "importTitle": "导入并重放",
+      "importText": "载入导出的记录。Orderveil 会根据参数和种子重新推导输入，重新运行排序和 AMM 执行，并逐一比对每个承诺，而不只是比较已存储的字段。",
+      "chooseFile": "选择 JSON 文件",
+      "paste": "…或粘贴 JSON",
+      "verifyPasted": "验证粘贴的记录",
+      "importFailed": "无法重放该记录",
+      "invalidJson": "文件不是有效的 JSON。",
+      "replayError": "重放中止：{{msg}}",
+      "tooLarge": "文件超过 5 MB。",
+      "fromFile": "来源：{{name}}",
+      "fromCurrent": "来源：当前实验（在内存中导出后重新导入）",
+      "fromPaste": "来源：粘贴的 JSON",
+      "note": "createdAt 仅供参考，不参与任何哈希。simulationSignature 每次导出使用新的本地 ed25519 密钥，只能说明记录导出后未被修改，不代表其他任何东西。它不是 TEE 证明，也不是 enclaveSig。"
+    },
+    "assumptions": {
+      "commonTitle": "所有模式",
+      "modeTitle": "{{mode}}模式",
+      "common": [
+        "恒定乘积池（x·y=k），手续费从输入端收取并留在池中；以 18 位小数整数计算，输出向下取整。",
+        "外部参考价格固定为初始池价格；盈亏按此价格计价。",
+        "Gas 成本 = Gas 单位 × 有效费率，以 BNB 支付。Gas 单位是模拟假设，不是实测数据。",
+        "其他订单流由种子确定性生成。相同种子和输入会复现相同实验。",
+        "Tick 是逻辑时间。20ms 是提案的工程目标，不是本网站或任何链已达到的延迟。"
+      ],
+      "public": [
+        "攻击者能看到你的待处理交易，用更高费率抢跑，用略低费率尾随。",
+        "费率介于两笔攻击交易之间的背景交易可能落入三明治中间，这完全由费率排序决定。",
+        "如果抢跑使你的成交超过滑点限制，你的交易会回滚，攻击者平仓亏损。"
+      ],
+      "protected": [
+        "攻击者无法观察到你的交易（无 Hint、无 after-ref），只能在同一 Tick 盲目提交高费率交易。",
+        "盲猜方向是否与你一致由种子或你选择的选项决定；方向一致时复现提案所述的残余风险。",
+        "盲猜仓位在下一个 Tick 通过普通交易平仓，此时 SubBlock 已发布。"
+      ],
+      "optin": [
+        "你的未签名交易体在到达 Tick 作为 Hint 披露；纳入时间延迟 5 个 Tick。",
+        "Searcher 基于披露时的池状态计算最优 backrun 并承诺 tip；最高 tip 紧接在你之后。",
+        "Orderveil 模型发现：在完整交易体 Hint 下，知情交易者仍可通过普通路径进入更早的 Tick，此时滑点限制是剩余的保护。这是该简化模型的性质，并非对 NewL1 最终设计的结论。",
+        "返还比例和剩余部分的 75/25 分成仅为示意性假设。"
+      ]
+    }
+  },
+  "tech": {
+    "eyebrow": "技术",
+    "title": "探索 BNB Chain NewL1 愿景",
+    "subtitle": "NewL1 的 TEE Gateway 提出了什么、交易排序为什么重要，以及 Orderveil 以模拟方式实现了其中哪些部分。",
+    "toc": "本页目录",
+    "source": "来源",
+    "inOrderveil": "在 Orderveil 中",
+    "topics": {
+      "newl1": {
+        "title": "什么是 NewL1？",
+        "body": [
+          "BNB Chain 将 NewL1 描述为垂直优化的通用 L1：BNB Chain 家族的新成员，完全兼容 EVM，专为交易、支付、隐私和 AI 而构建。",
+          "它与 BSC 互补而非取代 BSC，通过官方原生跨链桥连接。BNB 是原生代币，NewL1 不会发行新代币。本独立项目预留的代号 ORVL 与 BNB Chain 和 NewL1 均无关系。"
+        ],
+        "orderveil": "仅作背景介绍 —— 本站不连接 NewL1"
+      },
+      "whyOrdering": {
+        "title": "为什么交易排序很重要",
+        "body": [
+          "如果交易内容在排序前就可见，能控制或影响排序的人就可以围绕它交易：在大额买单之前买入，在其后立即卖出。受害者拿到的代币变少，差额就成了 MEV。",
+          "提案的目标表给出了回应：隐私（排序前隐藏）、公平（公开、可重放的规则，相同冻结输入集、规则版本和随机 salt 产生相同顺序），以及只在用户授权披露时内化有益的 MEV。"
+        ],
+        "orderveil": "实验场用真实 AMM 数学测量这部分损失"
+      },
+      "architecture": {
+        "title": "TEE Gateway 架构",
+        "body": [
+          "Gateway 被定位为可证明的排序与打包服务，而不是新的共识角色。它在 VM 型 TEE 中接收交易（首选 TDX，SEV-SNP 作为可替换后端），应用公开规则，生成连续的 SubBlock 流，并在 slot 结束时生成最终区块包。验证者负责验证、签名和提议。",
+          "每个验证者在同一区域选择一个主 Gateway 和一个备用 Gateway。正常运行时只有主 Gateway 输出数据流；故障切换发生在明确的 Tick 边界。"
+        ],
+        "orderveil": "各组件以纯函数模拟；没有 TEE，也没有网络"
+      },
+      "protected": {
+        "title": "受保护订单流",
+        "body": [
+          "交易默认私密：排序前，运营者、验证者和 searcher 只能看到密文，bundle 不能引用受保护交易。受保护交易不产生 Hint，并进入下一个可用 Tick。",
+          "提案明确说明了残余风险：抢跑和三明治攻击在结构上被禁止，但盲目提交的高费率抢跑仍可能碰巧成功。Orderveil 正是对这种情况建模，而不是宣称 MEV 为零。"
+        ],
+        "orderveil": "受保护路径 + 盲目抢跑实验"
+      },
+      "deterministic": {
+        "title": "确定性排序与 20ms Tick",
+        "body": [
+          "排序按 Tick 对冻结输入集进行。在 General 段中，交易按有效费率排序，平局由 H(txHash ‖ salt) 打破。Tick 长度 20ms 是工程目标，需要在真实 TEE、网络和存储上验证 P50/P99。",
+          "Orderveil 把提案未明确的部分固定在带版本号的规则集中：H 使用 SHA-256、平局按字节升序、salt 由种子、父 SubBlock 哈希和 Tick 推导，并保持每个发送者的 nonce 顺序。修改其中任何一项都会改变规则版本。"
+        ],
+        "orderveil": "纯 JS 引擎，附带可复现性测试"
+      },
+      "backruns": {
+        "title": "Opt-in 披露与 after-ref backrun",
+        "body": [
+          "用户可以授权披露。默认 Hint 是完整的未签名交易体，同时发布给所有订阅者，签名留在 TEE 内。纳入时间延迟 5 个 Tick，给 searcher 约 100ms 进行模拟和提交。",
+          "Searcher 通过 Gateway 生成的 targetCommitment 引用目标，只能被放在目标紧后方（after-ref），不存在 before-ref。候选者以承诺 tip 竞争，价值可以返还给订单流。"
+        ],
+        "orderveil": "Hint 流、承诺、有效性检查与 tip 竞争"
+      },
+      "subblocks": {
+        "title": "SubBlock 流",
+        "body": [
+          "每个 SubBlock 至少绑定 gatewayId、workloadId、rulesetVersion、term、slot、tick、parentSubBlockHash、inputCommitment、payloadHash 和 enclaveSig。最终区块包只能按确认顺序拼接 SubBlock。",
+          "Orderveil 生成除 enclaveSig 之外的全部字段，enclaveSig 只有真实 TEE 才能生成。实验记录带有独立的本地 simulationSignature，且从不把它当作 TEE 证明展示。"
+        ],
+        "orderveil": "每个逻辑 Tick 一个 SubBlock，按父哈希串联"
+      },
+      "auditing": {
+        "title": "可重放审计",
+        "body": [
+          "提案保留三类公开事实：允许的工作负载、每个 Gateway 本 epoch 使用的 enclave 密钥，以及产生最终区块的排序输入和规则。确定性重放会重新计算输入承诺、规则集、payloadHash 和依赖 salt 的结果，以发现违规排序或伪造输出。",
+          "Orderveil 的重放工具根据记录的参数重新推导输入，重新运行排序和 AMM 执行，并比对每个承诺。篡改交易、salt、排序结果或输入承诺都会导致重放失败。"
+        ],
+        "orderveil": "在实验场中导出 → 导入 → 重放"
+      }
+    },
+    "arch": {
+      "users": "用户",
+      "usersSub": "钱包、dApp",
+      "gateway": "TEE Gateway（提案）",
+      "gatewaySub": "Orderveil：模拟",
+      "parts": {
+        "ingress": {
+          "title": "加密入口",
+          "out": "回执、输入承诺"
+        },
+        "classifier": {
+          "title": "分类器",
+          "out": "受保护 / Opt-in"
+        },
+        "ordering": {
+          "title": "排序引擎",
+          "out": "已排序 payload"
+        },
+        "subblock": {
+          "title": "SubBlock 生成器",
+          "out": "payloadHash（+enclaveSig）"
+        },
+        "packager": {
+          "title": "区块打包器",
+          "out": "区块包"
+        }
+      },
+      "validator": "验证者",
+      "validatorSub": "验证、签名、提议",
+      "chain": "链",
+      "chainSub": "链上观察",
+      "caption": "根据提案 §03 架构和 §3.1 组件表简化。enclaveSig 只能由真实 TEE 生成，Orderveil 中不存在。"
+    },
+    "ticks": {
+      "backrun": "After-ref",
+      "caption": "逻辑时间线。在 Tick 1 到达的受保护交易于 Tick 1 排序；在 Tick 1 到达的 Opt-in 交易立即披露，于 Tick 6 纳入；Tick 2–5 期间提交的 backrun 紧接在它之后。",
+      "cells": {
+        "inc": "纳入",
+        "disc": "Hint",
+        "win": "窗口",
+        "sub": "提交",
+        "after": "紧随"
+      }
+    },
+    "mapping": {
+      "title": "NewL1 技术映射",
+      "subtitle": "每个 NewL1 概念、提案中的描述，以及 Orderveil 当前实际实现了什么。“计划”绝不写成“已实现”。",
+      "status": {
+        "simulated": "已模拟",
+        "simplified": "简化模拟",
+        "notImplemented": "未实现"
+      },
+      "statusHelp": {
+        "simulated": "本地模型，有测试",
+        "simplified": "简化之处已记录",
+        "notImplemented": "仅作描述"
+      },
+      "cols": {
+        "official": "提案",
+        "impl": "Orderveil",
+        "assumptions": "模型假设",
+        "missing": "尚未实现"
+      },
+      "try": "去试试",
+      "rows": {
+        "teeGateway": {
+          "concept": "TEE Gateway",
+          "official": "在 VM 型 TEE 中运行的可证明排序与打包服务，每个验证者配主备两个。",
+          "impl": "网关架构模拟：入口、分类器、排序、SubBlock、打包均为纯函数。",
+          "assumptions": "单网关、单 term 和 slot，无故障切换，无网络。",
+          "missing": "TEE 执行、RA-TLS、主备同步、故障切换、加密 WAL。"
+        },
+        "privateDefault": {
+          "concept": "默认私密",
+          "official": "受保护交易在排序前对运营者、验证者和 searcher 保持隐藏。",
+          "impl": "受保护订单流：无 Hint、无承诺、不可引用；测试会检查 searcher 视图是否泄露。",
+          "assumptions": "隐私是代码中的信息边界，不是加密。",
+          "missing": "真实加密与机密执行。"
+        },
+        "deterministic": {
+          "concept": "确定性排序",
+          "official": "按有效费率排序；平局使用 H(txHash ‖ salt)。",
+          "impl": "带版本化规则集和可复现性测试的 JavaScript 排序引擎。",
+          "assumptions": "H = SHA-256；平局升序；保持 nonce 顺序；省略 lane 和保证纳入尾部。",
+          "missing": "Lane 分段、backrun 以外的多交易原子 bundle、保证纳入尾部。"
+        },
+        "tick": {
+          "concept": "20ms Tick",
+          "official": "工程目标；需在真实硬件上验证 P50/P99。",
+          "impl": "逻辑 Tick 模拟器，显示 Tick 序号、冻结集、排序和输出批次。",
+          "assumptions": "仅逻辑时间，不做任何计时。",
+          "missing": "任何真实延迟测量。"
+        },
+        "optin": {
+          "concept": "Opt-in 披露",
+          "official": "授权把未签名交易体（或摘要）作为 Hint；默认延迟 5 个 Tick。",
+          "impl": "带 targetCommitment 和 5 个 Tick 窗口的授权 Hint 模型。",
+          "assumptions": "仅完整交易体 Hint；searcher 按披露时的状态估值。",
+          "missing": "字段级摘要、D 槽滞后执行状态、gw_* RPC 接口。"
+        },
+        "afterRef": {
+          "concept": "After-ref backrun",
+          "official": "只能紧跟目标；无 before-ref；按承诺 tip 竞争。",
+          "impl": "Backrun 排序实验，含有效性检查、tip 竞争和原子排除。",
+          "assumptions": "每个目标一个 backrun；目标或自身回滚时排除。",
+          "missing": "基于插件的评分、按利润分成定价。"
+        },
+        "subblock": {
+          "concept": "SubBlock 流",
+          "official": "每个 SubBlock 绑定 slot、tick、父哈希、承诺和 enclaveSig。",
+          "impl": "SubBlock 可视化，包含除 enclaveSig 外的所有字段。",
+          "assumptions": "对规范化 JSON 做 SHA-256；空 Tick 也会生成 SubBlock。",
+          "missing": "enclaveSig、验证者 ACK、区块包证明摘要。"
+        },
+        "inputCommitment": {
+          "concept": "输入承诺",
+          "official": "冻结集承诺支持事后重放。",
+          "impl": "可复现审计记录，每个 Tick 含输入承诺、payload 哈希和规则版本。",
+          "assumptions": "承诺 = 对排序后的哈希加域分隔做 SHA-256。",
+          "missing": "回执与加密 WAL 承诺。"
+        },
+        "replay": {
+          "concept": "可重放性",
+          "official": "重新计算承诺、规则集、payloadHash 和依赖 salt 的结果。",
+          "impl": "重放验证工具：导出、导入、重新运行、比对；显示重放通过 / 失败。",
+          "assumptions": "记录是自包含 JSON，带本地完整性签名。",
+          "missing": "与真实网关的跨平台测试向量。"
+        },
+        "attestation": {
+          "concept": "远程证明",
+          "official": "Quote 把短期 enclave 密钥绑定到允许的工作负载；每个 Tick 使用紧凑签名。",
+          "impl": "未实现。Orderveil 从不把自己的签名标注为证明。",
+          "assumptions": "—",
+          "missing": "全部：TDX/SEV-SNP quote、工作负载度量、密钥轮换。"
+        }
+      }
+    }
+  },
+  "docs": {
+    "eyebrow": "文档",
+    "navLabel": "文档章节",
+    "nav": {
+      "introduction": "简介",
+      "newl1-research": "NewL1 研究",
+      "architecture": "架构",
+      "simulation-model": "模拟模型",
+      "amm-math": "AMM 数学",
+      "ordering-rules": "排序规则",
+      "audit-records": "审计记录",
+      "limitations": "局限",
+      "roadmap": "路线图"
+    },
+    "sections": {
+      "introduction": {
+        "title": "简介",
+        "lead": "Orderveil Gateway Lab 是一个研究受保护交易排序与 MEV 的平台。第一版完全在你的浏览器中运行。",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "项目以 BNB Chain NewL1 公开的 TEE Gateway 提案为起点，把其中的排序规则变成实验：确定性排序引擎、逻辑 Tick 与 SubBlock 模拟器、带攻击者的恒定乘积 AMM，以及任何人都能重放的审计记录。"
+          },
+          {
+            "type": "h",
+            "text": "三类结果"
+          },
+          {
+            "type": "table",
+            "head": [
+              "类型",
+              "含义",
+              "第一版"
+            ],
+            "rows": [
+              [
+                "模拟（Simulation）",
+                "本地运行的数学模型和排序实验",
+                "本站全部内容"
+              ],
+              [
+                "测试网实验（Testnet Experiment）",
+                "真实测试网交易及合约验证",
+                "可选：在“审计与重放”中把实验存证发布到 BSC 测试网"
+              ],
+              [
+                "已验证原生集成（Verified Native Integration）",
+                "实际接入并在 NewL1 上验证",
+                "不可用"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "从哪里开始"
+          },
+          {
+            "type": "list",
+            "items": [
+              "实验场 —— 在公开、受保护、Opt-in 三种排序下运行同一笔交易。",
+              "网络拓扑 —— 跟随一次实验经过网关拓扑。",
+              "技术 —— 提案内容，以及哪些已实现、哪些未实现。",
+              "审计记录 —— 导出实验并重放。"
+            ]
+          },
+          {
+            "type": "note",
+            "text": "Orderveil 是参考 BNB Chain NewL1 公开技术提案构建的独立研究项目，并非 BNB Chain 官方项目，也未获得官方背书。预留代币名称 Orderveil（ORVL）尚未部署，也不是 BNB Chain 或 NewL1 的代币。"
+          }
+        ]
+      },
+      "newl1-research": {
+        "title": "NewL1 研究",
+        "lead": "Orderveil 所依据的官方资料，于 2026-10-20 阅读。",
+        "blocks": [
+          {
+            "type": "refs"
+          },
+          {
+            "type": "h",
+            "text": "Orderveil 采用的要点"
+          },
+          {
+            "type": "list",
+            "items": [
+              "核心提案：Gateway 是可证明的排序与打包服务，不是新的共识角色；验证者保留最终签名权。",
+              "默认私密；只在用户授权的边界内暴露 MEV。",
+              "受保护路径：无 Hint，不允许 after-ref 引用，进入下一个可用 Tick。",
+              "Opt-in 延迟路径：未签名交易体或摘要作为 Hint，默认延迟 5 个 Tick（约 100ms）。",
+              "General 排序：按有效费率；平局用 H(txHash ‖ salt)。",
+              "After-ref：只能紧跟目标；无 before-ref；按承诺 tip 竞争。",
+              "SubBlock 绑定 gatewayId、workloadId、rulesetVersion、term、slot、tick、parentSubBlockHash、inputCommitment、payloadHash、enclaveSig。",
+              "重放数据：冻结集承诺、规则参数、随机 salt、最终顺序。",
+              "承认残余风险：盲目提交的高费率抢跑可能碰巧成功。"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "提案未明确的细节"
+          },
+          {
+            "type": "p",
+            "text": "H 的哈希函数、字节编码、salt 来源、返还比例以及 tip 之外的候选评分在公开文本中均未定义。Orderveil 用明确的、带版本号的模拟选择填补，并从不把它们当作协议事实。完整的逐章节对照见仓库中的 docs/NEWL1_RESEARCH.md。"
+          }
+        ]
+      },
+      "architecture": {
+        "title": "架构",
+        "lead": "纯 JavaScript 模拟模块加上 React 界面。算法不依赖 UI，可以单独测试。",
+        "blocks": [
+          {
+            "type": "diagram",
+            "name": "arch"
+          },
+          {
+            "type": "h",
+            "text": "模块"
+          },
+          {
+            "type": "table",
+            "head": [
+              "模块",
+              "职责"
+            ],
+            "rows": [
+              [
+                "simulation/amm",
+                "恒定乘积数学、顺序执行、最优套利"
+              ],
+              [
+                "simulation/ordering",
+                "交易、bundle、规则集、分类、排序、SubBlock"
+              ],
+              [
+                "simulation/mev",
+                "参数、场景生成、指标、模式对比"
+              ],
+              [
+                "simulation/replay",
+                "实验记录、签名、重放验证"
+              ],
+              [
+                "components/topology",
+                "由引擎输出驱动的 React Flow 图"
+              ],
+              [
+                "pages",
+                "首页、技术、实验场、网络拓扑、文档"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "数据流"
+          },
+          {
+            "type": "code",
+            "text": "params ──normalize──▶ 场景输入（交易 + bundle，由种子生成）\n        ──runGateway / orderPublicBlock──▶ Tick、SubBlock、最终顺序\n        ──executeOrder──▶ AMM 步骤、余额、最终池子\n        ──buildExperimentRecord──▶ JSON 记录 ──replayExperiment──▶ 通过 / 失败"
+          }
+        ]
+      },
+      "simulation-model": {
+        "title": "模拟模型",
+        "lead": "实验场中的一次实验如何构建。每个数值都由输入和种子推导得出。",
+        "blocks": [
+          {
+            "type": "h",
+            "text": "参与者"
+          },
+          {
+            "type": "list",
+            "items": [
+              "用户 —— 一笔兑换，到达 Tick 1，最少获得量 = 初始池报价 × (1 − 滑点容忍度)。",
+              "其他订单流 —— N 笔兑换，方向、规模（输入储备的 0.05–0.5%）、费率（0.5–2.5 gwei）和到达 Tick（0–7）均来自对种子的 SHA-256 抽取。",
+              "攻击者 —— 行为取决于模式（见下表）。",
+              "Searcher —— 仅 Opt-in；各自计算最优 backrun，并承诺预期净利润中由种子决定的一部分（30–90%）作为 tip。"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "模式"
+          },
+          {
+            "type": "table",
+            "head": [
+              "模式",
+              "可见性",
+              "攻击者行为"
+            ],
+            "rows": [
+              [
+                "公开",
+                "全部可见；一个按费率排序的区块",
+                "用更高费率抢跑，略低费率尾随，卖出全部仓位"
+              ],
+              [
+                "受保护",
+                "不披露任何内容",
+                "在同一 Tick 盲猜方向提交高费率交易；下一 Tick 平仓"
+              ],
+              [
+                "Opt-in",
+                "到达时披露未签名交易体；5 个 Tick 后纳入",
+                "基于 Hint 在更早 Tick 提交普通交易；searcher 竞争 after-ref 位置"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "如何衡量 MEV 相关损失"
+          },
+          {
+            "type": "p",
+            "text": "每种模式运行两次：按配置运行一次，去掉攻击者再运行一次。MEV 相关损失是两次运行中你的输出差额，按参考价格计价。因此其他用户造成的价格影响不计入 MEV。负值表示攻击者的交易碰巧改善了你的价格。"
+          },
+          {
+            "type": "note",
+            "text": "默认值是为了让各种效果可见而选的示例。换一个种子，受保护路径可能比公开路径更差。这是模型本身的性质，也是本站从不宣称保证保护的原因。"
+          }
+        ]
+      },
+      "amm-math": {
+        "title": "AMM 数学",
+        "lead": "Uniswap V2 风格的恒定乘积，手续费从输入端收取，以 18 位小数整数计算。",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "x · y = k\neffectiveIn = amountIn · (10000 − feeBps) / 10000\namountOut   = reserveOut · effectiveIn / (reserveIn + effectiveIn)      （向下取整）\nreserveIn'  = reserveIn + amountIn          # 手续费留在池中，k 增大\nreserveOut' = reserveOut − amountOut"
+          },
+          {
+            "type": "p",
+            "text": "金额是以最小单位表示的 BigInt，不依赖浮点数。只在显示和图表时才转换为小数。"
+          },
+          {
+            "type": "h",
+            "text": "滑点与失败"
+          },
+          {
+            "type": "code",
+            "text": "minOut = quote(initialPool, amountIn) · (10000 − slippageBps) / 10000\n若 amountOut < minOut → 回滚，池子不变，仍支付 Gas"
+          },
+          {
+            "type": "h",
+            "text": "最优 backrun（Opt-in searcher）"
+          },
+          {
+            "type": "code",
+            "text": "参考价格 P = Rq0 / Rb0，g = 1 − fee\n池价偏高：x* = (√(g·Rb·Rq / P) − Rb) / g      卖出 BASE\n池价偏低：y* = (√(g·Rb·Rq·P) − Rq) / g      用 QUOTE 买入 BASE"
+          },
+          {
+            "type": "h",
+            "text": "收益核算"
+          },
+          {
+            "type": "list",
+            "items": [
+              "交易毛盈亏 = 代币余额变化按参考价格计价（已包含 AMM 手续费）。",
+              "已付 AMM 手续费单独列出以便透明。",
+              "Gas = Gas 单位 × 有效费率（BNB），按参考价格换算。",
+              "净收益 = 毛盈亏 − Gas（searcher 还要减去承诺 tip）。"
+            ]
+          }
+        ]
+      },
+      "ordering-rules": {
+        "title": "排序规则",
+        "lead": "规则集 orderveil-sim/ruleset/0.1.0。任何行为变化都会提升版本号。",
+        "blocks": [
+          {
+            "type": "diagram",
+            "name": "ticks"
+          },
+          {
+            "type": "table",
+            "head": [
+              "规则",
+              "定义",
+              "来源"
+            ],
+            "rows": [
+              [
+                "Tick",
+                "逻辑 20ms；Tick t 覆盖 [20t, 20t+20) ms",
+                "提案目标"
+              ],
+              [
+                "受保护纳入",
+                "在到达 Tick 冻结",
+                "提案"
+              ],
+              [
+                "Opt-in 纳入",
+                "arrivalTick + 5",
+                "提案"
+              ],
+              [
+                "General 排序",
+                "effectiveFeeRate 降序",
+                "提案"
+              ],
+              [
+                "平局规则",
+                "SHA-256(txHash ‖ salt) 升序，原始 32 字节拼接",
+                "提案（H）；哈希函数 = Orderveil"
+              ],
+              [
+                "Nonce",
+                "保持每个发送者的 nonce 顺序（price-and-nonce 合并）",
+                "Orderveil"
+              ],
+              [
+                "Salt",
+                "SHA-256(\"ORVL/salt/v1|\" ‖ seedHash ‖ parentSubBlockHash ‖ u64be(tick))",
+                "Orderveil"
+              ],
+              [
+                "After-ref",
+                "紧跟目标；最高 committedTip；平局 SHA-256(bundleHash ‖ salt)；每个目标最多 1 个",
+                "提案 + Orderveil 限制"
+              ],
+              [
+                "Before-ref",
+                "拒绝",
+                "提案"
+              ],
+              [
+                "受保护目标",
+                "引用它们的 bundle 被拒绝",
+                "提案"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Bundle 有效性检查（按顺序）"
+          },
+          {
+            "type": "list",
+            "items": [
+              "存在 beforeRef → rejected_before_ref",
+              "没有 afterRef → rejected_no_target",
+              "afterRef 是受保护交易的哈希或其推导承诺 → rejected_protected_target",
+              "afterRef 不匹配任何已发布 Hint → rejected_unknown_target",
+              "没有成员交易 → rejected_empty",
+              "在 Hint 披露前到达 → rejected_before_disclosure",
+              "在目标纳入 Tick 或之后到达 → rejected_late",
+              "有效期窗口不覆盖纳入 Tick → rejected_validity_window",
+              "committedTip 低于下限 → rejected_tip_floor",
+              "执行时：目标或成员回滚 → 整个 bundle 被排除"
+            ]
+          }
+        ]
+      },
+      "audit-records": {
+        "title": "审计记录",
+        "lead": "每次实验都可以导出为自包含的 JSON 记录，任何人都能重放。",
+        "blocks": [
+          {
+            "type": "h",
+            "text": "记录内容"
+          },
+          {
+            "type": "list",
+            "items": [
+              "schema：orderveil.experiment/v1，classification：simulation",
+              "experimentId = 对规则版本、参数和输入做 SHA-256 后取前 8 字节",
+              "ruleset：完整参数对象",
+              "config.params：规范化参数（含种子）",
+              "inputs：所有交易和 bundle 及其内容哈希",
+              "outputs：每个 Tick 的 salt、冻结集、排序条目、inputCommitment、payloadHash、父哈希和 SubBlock 哈希；最终顺序；带 executionHash 的 AMM 执行结果",
+              "simulationSignature：用新生成的本地密钥对记录摘要做 ed25519 签名"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "规范化哈希"
+          },
+          {
+            "type": "code",
+            "text": "规范化 JSON = 键排序、无空白、BigInt → 十进制字符串\ntxHash          = SHA-256(canonical({domain:\"ORVL/tx/v1\", …body}))\ninputCommitment = SHA-256(\"ORVL/input/v1|\" ‖ u64(tick) ‖ u64(n) ‖ 排序后的 txHash ‖ \"|bundles|\" ‖ u64(m) ‖ 排序后的 bundleHash)\npayloadHash     = SHA-256(canonical({domain:\"ORVL/payload/v1\", entries}))\nsubBlockHash    = SHA-256(canonical({domain:\"ORVL/subblock/v1\", …header}))"
+          },
+          {
+            "type": "h",
+            "text": "重放检查什么"
+          },
+          {
+            "type": "p",
+            "text": "重放是重新计算，而不是比较已存储的字段。它会校验每个内容哈希，根据参数和种子重新生成输入，重新运行排序引擎和 AMM，然后比对每个 Tick 的 salt、冻结集、输入承诺、排序、payload 哈希和 SubBlock 链，以及 bundle 决策、Hint、最终顺序和执行结果，最后验证本地签名。篡改交易、salt、种子、排序或承诺都会导致重放失败。"
+          },
+          {
+            "type": "note",
+            "text": "createdAt 仅供参考，不参与任何哈希。simulationSignature 只能说明记录导出后未被修改，它不是 TEE 证明，也不是 enclaveSig。"
+          },
+          {
+            "type": "h",
+            "text": "链上存证（BSC 测试网）"
+          },
+          {
+            "type": "p",
+            "text": "在“审计与重放”中，连接钱包后可以在 BSC 测试网上调用 OrderveilCommitments.commit(recordDigest, experimentId, finalSubBlockHash, executionHash, rulesetVersion)，每个摘要只能提交一次。任何人导入记录后无需钱包即可查询存证：重放会重新计算摘要，网站再核对链上字段是否与记录一致。"
+          },
+          {
+            "type": "note",
+            "text": "存证只能证明记录最晚在该区块时已经存在。它属于测试网实验产物，不代表 BSC 的排序由 Orderveil 控制，也不是 NewL1 或 TEE 证明。"
+          }
+        ]
+      },
+      "limitations": {
+        "title": "局限",
+        "lead": "直接说明这一版做不到什么。",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "没有 TEE、远程证明、enclaveSig 或 RA-TLS。隐私是代码中的信息边界，而不是加密。",
+              "不连接 NewL1。BSC 测试网只用于保存可选的审计存证，实验中的交易不会发送到任何链。",
+              "Tick 是逻辑时间；20ms 是提案目标，不是实测延迟。",
+              "单池、单网关、单 slot。没有 lane、保证纳入尾部或故障切换。",
+              "Searcher 按披露时的池状态估值 backrun，而不是 D 槽滞后的已执行状态。",
+              "外部价格固定为初始池价格，没有 CEX 价格过程。",
+              "攻击者使用固定策略，多个攻击者之间没有策略竞争。",
+              "Opt-in “知情抢跑”的发现来自这个简化模型及其完整交易体 Hint。提案还允许字段级摘要和其他策略，可能改变这一结果。",
+              "Gas 单位和返还比例是假设。",
+              "结果是模型输出，不预测真实世界的 MEV，也不构成投资建议。"
+            ]
+          }
+        ]
+      },
+      "roadmap": {
+        "title": "路线图",
+        "lead": "计划中的工作，与当前已有的功能分开列出。",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "阶段",
+              "范围",
+              "状态"
+            ],
+            "rows": [
+              [
+                "第一阶段 · 本地研究平台",
+                "网站、国际化、拓扑、AMM 模拟器、排序引擎、Tick、SubBlock、审计记录、重放",
+                "当前版本"
+              ],
+              [
+                "第二阶段 · BSC 测试网（链 ID 97）",
+                "钱包连接、RPC 适配器、测试网合约、提交实验承诺、浏览器链接",
+                "已上线：钱包连接、OrderveilCommitments 合约、存证发布与链上核对"
+              ],
+              [
+                "第三阶段 · NewL1 集成",
+                "在公开后研究真实 RPC 和 Gateway 接口，验证真实排序，测量性能，更新 SDK",
+                "取决于 NewL1 公开测试环境"
+              ]
+            ]
+          },
+          {
+            "type": "note",
+            "text": "把实验承诺发布到 BSC 测试网，只能证明该承诺在某个时间点存在，并不意味着 BSC 的交易排序由 Orderveil 控制。"
+          },
+          {
+            "type": "h",
+            "text": "代币"
+          },
+          {
+            "type": "p",
+            "text": "Orderveil（ORVL）是为未来可能的项目代币预留的名称。目前没有部署、出售或分发任何代币，没有代币经济模型，与 BNB、BNB Chain 或 NewL1 均无关系。"
+          }
+        ]
+      }
+    }
+  },
+  "wallet": {
+    "faucet": "领取测试 BNB（水龙头）",
+    "wrongNetwork": "网络不正确",
+    "disclaimer": "Orderveil 只会请求你的钱包签署由你自己发起的 BSC 测试网交易（审计存证），不会请求主网资金或消息签名。"
+  },
+  "onchain": {
+    "title": "链上存证",
+    "badge": "测试网实验",
+    "chainId": "链 ID {{id}}",
+    "contract": "合约",
+    "status": "状态",
+    "checking": "查询中…",
+    "readFailed": "无法从 RPC 读取",
+    "retry": "重试",
+    "committed": "已存证",
+    "notCommitted": "尚未存证",
+    "block": "区块",
+    "time": "区块时间",
+    "submitter": "提交者",
+    "contentCheck": "链上字段与记录对比",
+    "matches": "一致",
+    "mismatch": "不一致",
+    "commit": "提交到 BSC 测试网",
+    "confirmInWallet": "请在钱包中确认…",
+    "waiting": "等待确认…",
+    "tx": "交易",
+    "confirmed": "已确认",
+    "blockers": {
+      "connect": "连接钱包后即可发布存证。查询状态不需要钱包。",
+      "switch": "请将钱包切换到 {{chain}} 后再发布。"
+    },
+    "errors": {
+      "rejected": "你在钱包中拒绝了这笔交易。",
+      "alreadyCommitted": "这条记录摘要已经在链上存证过了。",
+      "reverted": "合约拒绝了这笔交易。",
+      "insufficientFunds": "测试 BNB 不足以支付 Gas。",
+      "wrongChain": "钱包当前在其他网络上。",
+      "receiptFailed": "交易失败或无法确认。",
+      "unknown": "交易未能发送。"
+    },
+    "notConfigured": "当前部署还没有配置存证合约。",
+    "note": "发布会把记录摘要、实验 ID、最终 SubBlock 哈希、执行哈希和规则版本写入 OrderveilCommitments 合约，证明这条记录最晚在该区块时已经存在。这不代表 BSC 的交易排序由 Orderveil 控制，模拟本身仍在本地运行。"
+  },
+  "social": {
+    "followX": "在 X 上关注 Orderveil",
+    "followOn": "在 X 上关注"
+  }
+}

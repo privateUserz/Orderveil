@@ -1,0 +1,1484 @@
+{
+  "brand": {
+    "tagline": "Private Intent. Fair Execution.",
+    "taglineLong": "Protected transaction ordering and MEV research infrastructure. Private intent, fair execution.",
+    "disclaimer": "Orderveil is an independent research project inspired by BNB Chain NewL1's public technical proposals. It is not affiliated with or endorsed by BNB Chain."
+  },
+  "common": {
+    "simulation": "Simulation",
+    "simulationTooltip": "Computed locally in your browser by Orderveil's simulation engine. Not a testnet or mainnet result.",
+    "soon": "Soon",
+    "loading": "Loading…",
+    "copy": "Copy to clipboard",
+    "learnMore": "Learn more",
+    "tick": "Tick",
+    "close": "Close",
+    "off": "Off"
+  },
+  "nav": {
+    "home": "Home",
+    "technology": "Technology",
+    "playground": "Playground",
+    "network": "Network",
+    "docs": "Docs",
+    "language": "Language",
+    "connectWallet": "Connect Wallet",
+    "homeAria": "Orderveil home",
+    "primary": "Primary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skip": "Skip to content"
+  },
+  "meta": {
+    "home": {
+      "title": "Orderveil — Protected Transaction Ordering Research",
+      "description": "Explore MEV-aware execution, deterministic ordering and protected order flow inspired by BNB Chain NewL1."
+    },
+    "technology": {
+      "title": "Technology",
+      "description": "How Orderveil maps BNB Chain NewL1's TEE Gateway proposal to a reproducible ordering simulation."
+    },
+    "playground": {
+      "title": "MEV Playground",
+      "description": "Run constant-product AMM experiments under public, protected and opt-in ordering, with exportable audit records."
+    },
+    "network": {
+      "title": "Network Topology",
+      "description": "Interactive topology of the simulated gateway: ingress, classification, ordering, SubBlocks and validation."
+    },
+    "docs": {
+      "title": "Documentation",
+      "description": "Simulation model, AMM math, ordering rules, audit records and limitations of Orderveil Gateway Lab."
+    },
+    "notFound": {
+      "title": "Page not found"
+    }
+  },
+  "notFound": {
+    "code": "route not found",
+    "title": "This route isn't part of the experiment.",
+    "text": "The page you're looking for doesn't exist. The simulation and documentation are still where you left them.",
+    "home": "Back to home"
+  },
+  "footer": {
+    "pillars": {
+      "privacy": {
+        "title": "Private by default",
+        "text": "Protected path, no hints"
+      },
+      "deterministic": {
+        "title": "Deterministic",
+        "text": "Same inputs, same order"
+      },
+      "composable": {
+        "title": "Replayable",
+        "text": "Export, import, verify"
+      },
+      "research": {
+        "title": "Open research",
+        "text": "Assumptions documented"
+      }
+    },
+    "tokenNote": "Reserved future token name: Orderveil (ORVL). Not deployed, not for sale, unrelated to BNB Chain.",
+    "navigation": "Navigation",
+    "documentation": "Documentation",
+    "sourceNote": "Source repository link will be added once published.",
+    "references": "Official research",
+    "simulationOnly": "Local simulations · optional BSC Testnet commitments"
+  },
+  "references": {
+    "teeGateway": {
+      "short": "NewL1 MEV Solution — TEE Gateway",
+      "kind": "Technical proposal",
+      "title": "Introducing NewL1 MEV Solution — TEE Gateway",
+      "summary": "Encrypted ingress, deterministic ordering, a continuous SubBlock stream and final block packaging inside an attestable VM-based TEE, with private-by-default transactions and opt-in after-ref backruns."
+    },
+    "newl1About": {
+      "short": "About the BNB Chain NewL1 category",
+      "kind": "Official introduction",
+      "title": "About the BNB Chain NewL1 category",
+      "summary": "NewL1 is a vertical-optimized, EVM-compatible L1 in the BNB Chain family for trading, payments, privacy and AI. It complements BSC; BNB is the native token and no new token will be issued."
+    }
+  },
+  "paths": {
+    "public": "Public",
+    "protected": "Protected",
+    "optin": "Opt-in"
+  },
+  "roles": {
+    "user": "Your trade",
+    "attacker": "Adversary",
+    "searcher": "Searcher backrun",
+    "background": "Other order flow",
+    "start": "Start"
+  },
+  "status": {
+    "executed": "Executed",
+    "reverted": "Reverted",
+    "excluded": "Excluded",
+    "missing": "Missing",
+    "pending": "Pending"
+  },
+  "reasons": {
+    "SLIPPAGE_EXCEEDED": "slippage limit exceeded",
+    "INSUFFICIENT_OUTPUT_AMOUNT": "output rounds to zero",
+    "NO_BALANCE": "no balance to spend"
+  },
+  "bundleStatus": {
+    "candidate": "Candidate",
+    "included": "Included",
+    "outbid": "Outbid",
+    "excluded_on_execution": "Excluded (reverted)",
+    "rejected_before_ref": "Rejected: before-ref",
+    "rejected_no_target": "Rejected: no target",
+    "rejected_protected_target": "Rejected: protected target",
+    "rejected_unknown_target": "Rejected: unknown target",
+    "rejected_empty": "Rejected: empty",
+    "rejected_before_disclosure": "Rejected: before disclosure",
+    "rejected_late": "Rejected: late",
+    "rejected_validity_window": "Rejected: validity window",
+    "rejected_tip_floor": "Rejected: tip floor",
+    "rejected_malformed": "Rejected: malformed"
+  },
+  "errors": {
+    "title": "The simulation can't run with these inputs",
+    "unknown": "Unexpected input error.",
+    "paramsInvalid": "The current Playground parameters are invalid. Fix them in the Playground to see results.",
+    "invalidNumber": "Enter a non-negative decimal number.",
+    "tooPrecise": "Too many decimal places (max 18).",
+    "invalidPercent": "Enter a percentage with at most 2 decimals.",
+    "outOfRange": "Value is outside the allowed range.",
+    "invalidInteger": "Enter a whole number.",
+    "zeroAmount": "Amount must be greater than zero.",
+    "invalidLiquidity": "Pool reserves must be greater than zero.",
+    "invalidSeed": "Seed must be 1–64 characters.",
+    "invalidMode": "Unknown execution mode.",
+    "invalidDirection": "Unknown trade direction.",
+    "invalidGuess": "Unknown blind-guess option.",
+    "INVALID_LIQUIDITY": "Pool reserves must be greater than zero.",
+    "ZERO_AMOUNT": "Amount must be greater than zero.",
+    "pageTitle": "This page failed to load",
+    "pageText": "Something went wrong while rendering this page. Reloading usually fixes it; your experiment parameters are kept.",
+    "staleTitle": "The site was just updated",
+    "staleText": "This tab is running an older version. Reload to get the latest one; your experiment parameters are kept.",
+    "reload": "Reload page"
+  },
+  "charts": {
+    "priceTimelineAria": "Line chart of the pool spot price after each transaction in execution order.",
+    "spotPrice": "Spot price (USDT/BNB)",
+    "start": "Initial pool",
+    "failedStep": "Reverted / excluded",
+    "execPriceAria": "Bar chart comparing the user's execution price in each mode with and without the adversary.",
+    "quoted": "quote at submission",
+    "withAdversary": "With adversary",
+    "baseline": "Without adversary",
+    "timelineNote": "Each point is the pool's spot price after one transaction, in the order produced by the ordering engine. Failed transactions leave the price unchanged."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Gateway Lab · Research platform",
+      "title": "A fairer transaction layer.",
+      "subtitle": "Explore protected transaction ordering, private order flow, and MEV-aware execution.",
+      "inspired": "Inspired by BNB Chain NewL1's TEE Gateway research.",
+      "ctaPrimary": "Explore Gateway Lab",
+      "ctaSecondary": "Read Documentation",
+      "caption": "Every number on this site is computed by a local, replayable simulation.",
+      "art": {
+        "aria": "Isometric diagram: a user transaction flows through encrypted ingress and an off-chain gateway (simulated here) to a validator; audit commitments can be published to BSC Testnet.",
+        "user": "User",
+        "ingress": "Encrypted ingress",
+        "ingressSub": "protected / opt-in",
+        "gateway": "Gateway",
+        "gatewaySub": "(Off-chain · simulated)",
+        "validator": "Validator",
+        "bsc": "BSC Testnet",
+        "bscSub": "Phase 2 · audit commitments"
+      }
+    },
+    "capabilities": {
+      "aria": "Core capabilities",
+      "items": {
+        "protected": {
+          "title": "Protected Order Flow",
+          "text": "Default path with no hints and no after-ref references."
+        },
+        "deterministic": {
+          "title": "Deterministic Ordering",
+          "text": "Fee rate first, H(txHash‖salt) for ties."
+        },
+        "mev": {
+          "title": "MEV Research",
+          "text": "Real constant-product math, not fixed percentages."
+        },
+        "subblock": {
+          "title": "SubBlock Streaming",
+          "text": "20 ms logical ticks, chained by parent hash."
+        },
+        "audit": {
+          "title": "Replayable Auditing",
+          "text": "Export a record, re-run it, compare every hash."
+        }
+      }
+    },
+    "how": {
+      "title": "How It Works",
+      "subtitle": "User → encrypted ingress → ordering engine → validator → settlement",
+      "note": "Modelled on the proposal's architecture. In Orderveil every box is a step of a local simulation, not a deployed service.",
+      "columns": {
+        "users": {
+          "title": "Users",
+          "sub": "Submit intent",
+          "items": {
+            "swap": "Swap",
+            "transfer": "Transfer",
+            "defi": "DeFi interaction"
+          }
+        },
+        "gateway": {
+          "title": "TEE Gateway",
+          "sub": "Proposal: attestable ordering service",
+          "items": {
+            "encrypt": "Encrypted ingress",
+            "order": "Deterministic ordering",
+            "subblocks": "Generate SubBlocks",
+            "signed": "Signed output (enclaveSig)"
+          }
+        },
+        "validators": {
+          "title": "Validators",
+          "sub": "Final signing authority",
+          "items": {
+            "verify": "Verify ordering & proof",
+            "propose": "Propose block"
+          }
+        }
+      }
+    },
+    "topology": {
+      "title": "Network Topology",
+      "open": "Open full topology",
+      "done": "{{count}} transactions ordered across {{ticks}} ticks"
+    },
+    "settlement": {
+      "title": "Chain Settlement Flow",
+      "sub": "Experiment lifecycle",
+      "detail": "View detailed flow",
+      "note": "Settlement here means updating a simulated AMM pool. The only on-chain step is an optional commitment of the audit record to BSC Testnet.",
+      "steps": {
+        "submit": {
+          "title": "Submit",
+          "text": "A transaction enters ingress on the protected or opt-in path."
+        },
+        "order": {
+          "title": "Order",
+          "text": "The frozen set of a tick is ordered by public, versioned rules."
+        },
+        "execute": {
+          "title": "Execute",
+          "text": "Ordered SubBlocks run sequentially against the AMM state."
+        },
+        "settle": {
+          "title": "Settle",
+          "text": "Final reserves, balances and an exportable audit record."
+        }
+      }
+    },
+    "subblocks": {
+      "title": "SubBlock Log",
+      "more": "View in Network",
+      "empty": "No SubBlocks to show",
+      "cols": {
+        "hash": "SubBlock",
+        "tick": "Tick",
+        "txs": "Txs",
+        "content": "Content",
+        "time": "Logical time"
+      },
+      "withBackrun": "After-ref backrun",
+      "logicalMs": "{{ms}} ms",
+      "note": "Generated just now by the ordering engine for the current opt-in experiment. Hashes are SHA-256 simulation commitments, not chain data."
+    },
+    "compare": {
+      "title": "Compare the Difference",
+      "subtitle": "Same trade, same pool, same adversary — current Playground parameters (seed “{{seed}}”).",
+      "more": "See full data in Playground",
+      "fix": "Open Playground",
+      "public": {
+        "title": "Public Mempool",
+        "sub": "Adversary sees the trade"
+      },
+      "protected": {
+        "title": "Protected by Gateway",
+        "sub": "Adversary trades blind"
+      },
+      "userStatus": "Your trade",
+      "priceImpact": "Your price impact",
+      "mevLoss": "vs. no adversary",
+      "benefits": {
+        "title": "Key Benefits",
+        "items": {
+          "reduce": {
+            "title": "Reduce MEV loss",
+            "text": "Hide intent before ordering."
+          },
+          "fair": {
+            "title": "Fair & transparent ordering",
+            "text": "Public rules, no discretion."
+          },
+          "better": {
+            "title": "User-authorized value",
+            "text": "Opt-in backruns can refund users."
+          },
+          "open": {
+            "title": "Replayable by anyone",
+            "text": "Commitments make audits mechanical."
+          }
+        }
+      },
+      "cta": "Open the Playground",
+      "disclaimer": "Results depend entirely on the model's assumptions. Protected ordering is not a guarantee of a better price: a blind high-fee front leg can still coincidentally hurt the user, as the proposal itself notes."
+    },
+    "research": {
+      "eyebrow": "Research foundation",
+      "title": "Exploring BNB Chain NewL1",
+      "subtitle": "Orderveil starts from NewL1's public TEE Gateway proposal and turns its ordering rules into experiments anyone can run, inspect and replay.",
+      "relationTitle": "How Orderveil relates to the proposal",
+      "relation": [
+        {
+          "ok": true,
+          "text": "Implements the proposal's public ordering rules as a deterministic JavaScript engine: fee-rate ordering, H(txHash‖salt) ties, 5-tick opt-in delay, after-ref only."
+        },
+        {
+          "ok": true,
+          "text": "Records SubBlock fields, input commitments and payload hashes so every experiment can be replayed and verified."
+        },
+        {
+          "ok": false,
+          "text": "Does not run a TEE, produce attestation or an enclaveSig, or connect to NewL1. Those are proposal-level features this site only describes."
+        },
+        {
+          "ok": false,
+          "text": "Fills gaps the proposal leaves open (salt derivation, hashing, refund share) with clearly labelled Orderveil choices."
+        }
+      ]
+    }
+  },
+  "topology": {
+    "ariaLabel": "Interactive network topology of the simulated gateway",
+    "futureTag": "Future integration",
+    "layers": {
+      "user": "User layer",
+      "ingress": "Transaction ingress",
+      "gateway": "Gateway layer",
+      "validator": "Validator layer",
+      "settlement": "Settlement layer"
+    },
+    "nodes": {
+      "walletA": {
+        "label": "Wallet A",
+        "short": "your trade in the experiment",
+        "desc": "Represents the user whose swap is being studied. In the simulation it submits exactly one transaction (transactionId “user”)."
+      },
+      "walletB": {
+        "label": "Wallet B",
+        "short": "other order flow",
+        "desc": "Represents other users. The simulation generates their swaps deterministically from the seed (size, direction, fee rate, arrival tick)."
+      },
+      "walletC": {
+        "label": "Wallet C",
+        "short": "adversary or searchers",
+        "desc": "Represents MEV actors: a sandwich attacker on the public path, a blind or hint-informed trader on gateway paths, and backrun searchers on the opt-in path."
+      },
+      "ingress": {
+        "label": "Encrypted Ingress",
+        "short": "receives transactions",
+        "desc": "In the proposal, transactions are decrypted only inside the TEE. Orderveil models the information boundary (who can see what) but does not encrypt anything; there is no TEE.",
+        "source": "Proposal §3.1 — Encrypted ingress"
+      },
+      "classifier": {
+        "label": "Transaction Classifier",
+        "short": "protected vs opt-in",
+        "desc": "Routes each transaction to the protected path (default) or the opt-in delayed path. Only opt-in transactions produce a hint and a targetCommitment.",
+        "source": "Proposal §3.1 — Classifier; §4.1"
+      },
+      "protectedQueue": {
+        "label": "Protected Queue",
+        "short": "no hints, no after-ref",
+        "desc": "Default path. Contents are never disclosed to simulated searchers and cannot be referenced by bundles. A transaction enters its arrival tick.",
+        "source": "Proposal §4.1 — Protected path"
+      },
+      "optinQueue": {
+        "label": "Opt-in Queue",
+        "short": "5-tick disclosure window",
+        "desc": "User-authorized path. The unsigned transaction body is published as a hint and inclusion is delayed by 5 ticks (≈100 ms logical) so searchers can submit after-ref backruns.",
+        "source": "Proposal §4.1, §4.2"
+      },
+      "ordering": {
+        "label": "Deterministic Ordering Engine",
+        "short": "fee rate, then H(txHash‖salt)",
+        "desc": "Orders each tick's frozen set by effective fee rate (descending), breaks ties with SHA-256(txHash‖salt), keeps sender nonce order and places the best after-ref bundle directly after its target.",
+        "source": "Proposal §4.1 — General, After-ref"
+      },
+      "subblock": {
+        "label": "SubBlock Generator",
+        "short": "chained per tick",
+        "desc": "Binds each tick's output to gatewayId, workloadId, rulesetVersion, term, slot, tick, parentSubBlockHash, inputCommitment and payloadHash. No enclaveSig is produced because there is no TEE.",
+        "source": "Proposal §3.2 — Data boundaries"
+      },
+      "packaging": {
+        "label": "Block Packaging",
+        "short": "concatenate in order",
+        "desc": "Concatenates SubBlocks in acknowledged order into the final sequence that the AMM executes. Transactions cannot be removed, inserted or reordered.",
+        "source": "Proposal §3.1 — Block packager"
+      },
+      "validator": {
+        "label": "Validator",
+        "short": "conceptual verification",
+        "desc": "In the proposal, the validator verifies, signs and proposes. Here it is conceptual: the simulation executes the packaged order and reports outcomes; no consensus is simulated.",
+        "source": "Proposal §00, §07"
+      },
+      "settlementContract": {
+        "label": "Commitment Contract",
+        "short": "audit commitments",
+        "desc": "OrderveilCommitments on BSC Testnet. From the Playground's Audit tab you can publish an experiment's record digest, final SubBlock hash and execution hash here with your wallet. It records that the commitment existed; it does not settle trades."
+      },
+      "bscTestnet": {
+        "label": "BSC Testnet",
+        "short": "chain 97",
+        "desc": "Connected for audit commitments only (chain ID 97). Experiment transactions are never sent to BSC, and BSC's ordering is not affected by Orderveil."
+      }
+    },
+    "testnetTag": "BSC Testnet"
+  },
+  "network": {
+    "eyebrow": "Network",
+    "title": "Gateway topology, driven by the engine",
+    "subtitle": "Run one experiment round and follow it through ingress, classification, ordering, SubBlock generation and validation. Highlights and counts come from the ordering engine's actual output for the current Playground parameters.",
+    "path": "User path",
+    "runRound": "Run one round",
+    "runAgain": "Run again",
+    "step": "Step",
+    "resetRun": "Reset",
+    "resetView": "Reset view",
+    "stageLabel": "Stage",
+    "stages": {
+      "idle": "Idle",
+      "received": "Received",
+      "classified": "Classified",
+      "ordered": "Ordered",
+      "packaged": "Packaged",
+      "completed": "Completed"
+    },
+    "stageText": {
+      "idle": "Ready. Choose a path and run a round. The experiment uses the parameters from the Playground.",
+      "received": "Ingress received {{txCount}} transactions and {{bundleCount}} after-ref bundles across ticks {{firstTick}}–{{lastTick}}.",
+      "classified": "Classifier routed {{protectedCount}} to the protected path and {{optinCount}} to the opt-in path; {{hintCount}} hint(s) published.",
+      "ordered": "Ordering engine produced a deterministic order of {{orderedCount}} transactions; {{includedBundles}} after-ref bundle(s) placed.",
+      "packaged": "{{tickCount}} SubBlocks generated ({{nonEmptyTicks}} non-empty), chained by parent hash. Final hash {{finalHash}}…",
+      "completed": "Executed on the simulated AMM. Your trade: {{userStatus}}. {{failed}} transaction(s) did not execute."
+    },
+    "statusTitle": "Experiment status",
+    "inputs": "Inputs",
+    "inputsValue": "{{txs}} txs · {{bundles}} bundles",
+    "ticks": "Logical ticks",
+    "seed": "Seed",
+    "clickHint": "Click any node to see what it does and the data it holds in this experiment. Drag to pan, scroll or use the controls to zoom.",
+    "legend": "Nodes describe the experimental architecture. No server, TEE or chain is involved.",
+    "legendActive": "Active in the current stage",
+    "legendFuture": "Optional testnet step (outside the simulated round)",
+    "subblocksTitle": "Ticks & SubBlocks",
+    "subblocksSub": "One SubBlock per 20 ms logical tick. The highlighted tick contains your trade.",
+    "orderTitle": "Ordering result",
+    "orderSub": "Final execution order across all SubBlocks.",
+    "orderPending": "Run the experiment to the “Ordered” stage to reveal the result.",
+    "data": {
+      "transactions": "Transactions",
+      "bundles": "Bundles",
+      "received": "Received items",
+      "queued": "Queued",
+      "hints": "Hints published",
+      "rule": "Primary rule",
+      "tieBreak": "Tie-break",
+      "ordered": "Ordered transactions",
+      "bundleResult": "Bundle results",
+      "subblocks": "SubBlocks",
+      "range": "Range",
+      "packaged": "Package",
+      "packagedValue": "{{txs}} txs from {{sb}} SubBlocks",
+      "userStatus": "Your trade",
+      "failed": "Not executed",
+      "status": "Status",
+      "contract": "Contract",
+      "notDeployed": "not configured"
+    }
+  },
+  "playground": {
+    "eyebrow": "MEV Playground",
+    "title": "Run the same trade under three ordering models",
+    "subtitle": "A constant-product AMM, a deterministic ordering engine and an adversary. Change any input and every number, chart and hash is recomputed.",
+    "tabs": {
+      "label": "Playground views",
+      "results": "Results",
+      "compare": "Public vs Protected",
+      "ordering": "Ordering & Ticks",
+      "audit": "Audit & Replay"
+    },
+    "sections": {
+      "outcome": "Outcome · {{mode}}",
+      "outcomeSub": "All amounts are simulated",
+      "timeline": "Pool price timeline",
+      "timelineSub": "Spot price after each step",
+      "execPrice": "Execution price by mode",
+      "execPriceSub": "Lower is better for a buy",
+      "sequence": "Attack sequence",
+      "sequenceSub": "Execution order and results",
+      "assumptions": "Model assumptions & limits",
+      "ticks": "Tick simulation",
+      "ticksSub": "20 ms logical ticks",
+      "ordering": "Transaction ordering",
+      "orderingSub": "Final order with fee rates",
+      "audit": "Audit record & replay",
+      "auditSub": "Deterministic, SHA-256 commitments"
+    },
+    "params": {
+      "title": "Experiment inputs",
+      "reset": "Reset",
+      "exampleNote": "Initial values are examples, not market data. Base token is BNB-like, quote token USDT-like, both 18 decimals.",
+      "groupTrade": "Your trade",
+      "direction": "Trade direction",
+      "buy": "Buy",
+      "sell": "Sell",
+      "tradeAmount": "Trade amount",
+      "slippagePercent": "Slippage tolerance",
+      "slippageHint": "vs. quote at submission",
+      "groupPool": "Pool",
+      "poolBase": "Base reserve",
+      "poolQuote": "Quote reserve",
+      "feePercent": "Swap fee",
+      "feeHint": "stays in the pool",
+      "groupAdversary": "Adversary",
+      "attackerEnabled": "Attacker enabled",
+      "attackerDesc": "Public: sees your tx and sandwiches it. Protected: trades blind. Opt-in: reads the hint.",
+      "attackerAmount": "Attacker trade amount",
+      "sizeToMax": "Size to your slippage limit",
+      "blindGuess": "Blind direction (protected path)",
+      "guess": {
+        "seed": "Derived from seed",
+        "same": "Same as yours (worst case)",
+        "opposite": "Opposite to yours"
+      },
+      "groupExecution": "Execution",
+      "mode": "Execution mode",
+      "seed": "Simulation seed",
+      "seedHint": "drives all generated flow",
+      "userFeeGwei": "Your effective fee rate",
+      "groupAdvanced": "Advanced assumptions",
+      "gasUnits": "Gas per swap",
+      "backgroundTxCount": "Other txs",
+      "searcherCount": "Searchers",
+      "refundPercent": "Tip refund to user",
+      "advancedNote": "Gas and refund share are simulation assumptions. The proposal does not fix order-flow refunds; it starts with a 75/25 validator/gateway split."
+    },
+    "metrics": {
+      "userTx": "Your transaction",
+      "position": "position {{n}}",
+      "userInput": "User input",
+      "direction": "Direction: {{dir}}",
+      "userOutput": "User output",
+      "quoted": "quoted {{v}}",
+      "execPrice": "Execution price",
+      "spotBefore": "spot before {{v}}",
+      "priceImpact": "Price impact",
+      "quotedImpact": "quoted {{v}}",
+      "slippage": "Slippage vs quote",
+      "minOut": "min. out {{v}}",
+      "mevLoss": "MEV-related loss",
+      "failedByAdversary": "Trade failed",
+      "mevLossSub": "vs. same run without adversary",
+      "refund": "Opt-in refund",
+      "refundSub": "{{pct}}% of the winning tip",
+      "userGas": "Your gas cost",
+      "gasSub": "simulated gas × fee rate",
+      "attacker": "Adversary P&L",
+      "noAttacker": "No adversary in this run.",
+      "gross": "Gross trading P&L",
+      "lpFees": "AMM fees paid (included)",
+      "gas": "Simulated gas",
+      "net": "Net profit",
+      "blindGuess": "Blind guess",
+      "guessRight": "matched your direction",
+      "guessWrong": "did not match",
+      "reserves": "Pool reserves",
+      "before": "Before",
+      "after": "After",
+      "reservesNote": "After all {{count}} steps in this run, including other order flow."
+    },
+    "strategy": {
+      "sandwich": "Sandwich (sees your tx)",
+      "blind-front-leg": "Blind high-fee front leg",
+      "informed-front-leg": "Hint-informed front leg"
+    },
+    "ordering": {
+      "caption": "Transactions in final execution order",
+      "tx": "Transaction",
+      "hash": "txHash",
+      "fee": "Fee (gwei)",
+      "side": "Side",
+      "in": "In",
+      "out": "Out",
+      "status": "Status",
+      "afterRef": "after-ref"
+    },
+    "ticks": {
+      "publicTitle": "No ticks on the public path",
+      "publicText": "The public model is one block ordered by fee in a fully visible mempool. Switch to Protected or Opt-in to inspect gateway ticks and SubBlocks.",
+      "aria": "Ticks",
+      "inputs": "Tick {{tick}} — inputs and output",
+      "arrivals": "Arrived",
+      "bundleArrivals": "Bundles arrived",
+      "frozen": "Frozen set",
+      "salt": "Salt",
+      "output": "Output batch (ordered)",
+      "emptyTick": "Empty tick — an empty SubBlock still extends the chain.",
+      "subblock": "SubBlock header",
+      "noEnclaveSig": "not produced (no TEE)",
+      "hints": "Opt-in hints",
+      "window": "Disclosure window",
+      "disclosed": "Disclosed",
+      "disclosedValue": "unsigned body: sender, nonce, fee, payload",
+      "hintsNote": "Protected transactions never appear here. Searchers reference the commitment, not the signed hash.",
+      "bundles": "After-ref competition",
+      "noBundles": "No bundles were submitted.",
+      "tip": "tip {{v}} BNB",
+      "bundlesNote": "Highest committed tip wins; ties by SHA-256(bundleHash‖salt). One backrun per target."
+    },
+    "compare": {
+      "public": {
+        "title": "Public Transaction Flow",
+        "sub": "mempool visible to everyone"
+      },
+      "protected": {
+        "title": "Protected Transaction Flow",
+        "sub": "gateway, private by default"
+      },
+      "order": "Execution order",
+      "received": "You receive",
+      "attackerNet": "Adversary net",
+      "fees": "Total gas (all txs)",
+      "pool": "Initial pool",
+      "adversary": "Adversary size",
+      "sharedInputs": "Identical inputs on both sides",
+      "caveatTitle": "Read these results with the model in mind",
+      "caveats": [
+        "Outcomes depend on the seed, sizes and fee rates you chose. Protected ordering does not guarantee a better price.",
+        "On the protected path the adversary cannot see your trade, but a blind high-fee trade in the same direction can still coincidentally hurt you (proposal §05 residual risk).",
+        "The public path assumes a perfectly informed attacker that wins fee priority; real attackers face competition, latency and failure.",
+        "MEV-related loss is measured against the same run without the adversary, so normal price impact from other users is not counted as MEV."
+      ]
+    },
+    "audit": {
+      "passed": "Replay Passed",
+      "failed": "Replay Failed",
+      "loadParams": "Load these parameters",
+      "checks": {
+        "structure": "Record structure",
+        "rulesetVersion": "Ruleset version supported",
+        "rulesetParameters": "Ruleset parameters",
+        "transactionHashes": "Transaction & bundle hashes",
+        "inputsFromParameters": "Inputs regenerate from parameters",
+        "experimentId": "Experiment ID",
+        "tickRange": "Tick range",
+        "salt": "Salt per tick",
+        "frozenSets": "Frozen sets",
+        "inputCommitment": "Input commitments",
+        "ordering": "Ordering result",
+        "payloadHash": "Payload hashes",
+        "subBlockChain": "SubBlock chain",
+        "bundleDecisions": "Bundle decisions",
+        "hints": "Hints",
+        "finalOrder": "Final order",
+        "execution": "AMM execution",
+        "simulationSignature": "Local signature"
+      },
+      "ok": "match",
+      "mismatch": "mismatch",
+      "recordTitle": "Current experiment record",
+      "inputs": "Inputs",
+      "inputsValue": "{{txs}} transactions · {{bundles}} bundles",
+      "sigScope": "local ed25519, not TEE",
+      "export": "Export JSON",
+      "replayCurrent": "Replay current",
+      "importTitle": "Import & replay",
+      "importText": "Load an exported record. Orderveil re-derives the inputs from the parameters and seed, re-runs ordering and AMM execution, and compares every commitment — it does not just compare stored fields.",
+      "chooseFile": "Choose JSON file",
+      "paste": "…or paste JSON",
+      "verifyPasted": "Verify pasted record",
+      "importFailed": "Could not replay this record",
+      "invalidJson": "The file is not valid JSON.",
+      "replayError": "Replay stopped: {{msg}}",
+      "tooLarge": "File is larger than 5 MB.",
+      "fromFile": "Source: {{name}}",
+      "fromCurrent": "Source: current experiment (exported and re-imported in memory)",
+      "fromPaste": "Source: pasted JSON",
+      "note": "createdAt is informational and excluded from all hashes. The simulationSignature uses a fresh local ed25519 key per export; it shows the record wasn't altered after export, and nothing more. It is not a TEE attestation or an enclaveSig."
+    },
+    "assumptions": {
+      "commonTitle": "All modes",
+      "modeTitle": "{{mode}} mode",
+      "common": [
+        "Constant-product pool (x·y=k) with an input-side fee that stays in the pool; integer math in 18-decimal units, outputs rounded down.",
+        "External reference price is fixed at the initial pool price; P&L is valued at that price.",
+        "Gas cost = gas units × effective fee rate, paid in BNB. Gas units are a simulation assumption, not measured data.",
+        "Other order flow is generated deterministically from the seed. Same seed and inputs reproduce the same experiment.",
+        "Ticks are logical time. 20 ms is the proposal's engineering target, not a latency this website or any chain achieved."
+      ],
+      "public": [
+        "The attacker sees your pending transaction, bids a higher fee for the front-run and a slightly lower fee for the back-run.",
+        "Background transactions with fees between the two legs can land inside the sandwich, exactly as fee ordering dictates.",
+        "If the front-run pushes you past your slippage limit, your transaction reverts and the attacker unwinds at a loss."
+      ],
+      "protected": [
+        "The adversary cannot observe your transaction (no hints, no after-ref). It can only submit a blind high-fee trade in the same tick.",
+        "Whether the blind guess matches your direction comes from the seed or the option you choose; a match reproduces the proposal's stated residual risk.",
+        "The blind position is closed with an ordinary transaction in the next tick, after the SubBlock is published."
+      ],
+      "optin": [
+        "Your unsigned transaction body is disclosed as a hint at your arrival tick; inclusion is delayed by 5 ticks.",
+        "Searchers compute an optimal backrun on the disclosed pool state and commit a tip; the best tip is placed directly after you.",
+        "Orderveil model finding: with full-body hints, an informed trader can still enter an earlier tick through the ordinary path. Your slippage limit is the remaining protection. This is a property of this simplified model, not a claim about the final NewL1 design.",
+        "Refund share and the 75/25 split of the remainder are assumptions for illustration."
+      ]
+    }
+  },
+  "tech": {
+    "eyebrow": "Technology",
+    "title": "Exploring the BNB Chain NewL1 vision",
+    "subtitle": "What NewL1's TEE Gateway proposes, why transaction ordering matters, and exactly which parts Orderveil implements as a simulation.",
+    "toc": "On this page",
+    "source": "Source",
+    "inOrderveil": "In Orderveil",
+    "topics": {
+      "newl1": {
+        "title": "What is NewL1?",
+        "body": [
+          "NewL1 is described by BNB Chain as a vertical-optimized general-purpose L1: a new, fully EVM-compatible member of the BNB Chain family built for trading, payments, privacy and AI.",
+          "It complements BSC rather than replacing it, connected through an official native bridge. BNB is the native token, and no new token will be issued for NewL1. ORVL, the reserved ticker of this independent project, is unrelated to BNB Chain or NewL1."
+        ],
+        "orderveil": "context only — nothing here connects to NewL1"
+      },
+      "whyOrdering": {
+        "title": "Why transaction ordering matters",
+        "body": [
+          "When the content of a transaction is visible before it is ordered, whoever controls or can influence ordering can trade around it: buy before a large buy and sell right after. The victim receives fewer tokens; the difference becomes MEV.",
+          "The proposal's goals table states the response: privacy (hidden before ordering), fairness (public, replayable rules where the same frozen input set, ruleset version and random salt produce the same order), and internalizing beneficial MEV only when users authorize disclosure."
+        ],
+        "orderveil": "the Playground measures this loss with real AMM math"
+      },
+      "architecture": {
+        "title": "TEE Gateway architecture",
+        "body": [
+          "The Gateway is proposed as an attestable ordering and packaging service, not a new consensus role. It receives transactions inside a VM-based TEE (TDX first, SEV-SNP as an alternative backend), applies public rules, generates a continuous SubBlock stream, and produces the final block package at the end of the slot. The validator verifies, signs and proposes.",
+          "Each validator selects a primary and a standby Gateway in the same region. Only the primary streams during normal operation; failover happens at an explicit tick boundary."
+        ],
+        "orderveil": "the components are simulated as pure functions; no TEE, no network"
+      },
+      "protected": {
+        "title": "Protected order flow",
+        "body": [
+          "Transactions are private by default: before ordering, operators, validators and searchers see only ciphertext, and bundles cannot reference protected transactions. A protected transaction receives no hint and enters the next available tick.",
+          "The proposal is explicit about residual risk: frontrunning and sandwiching are prohibited structurally, yet a blindly submitted, high-fee front leg may coincidentally succeed. Orderveil models exactly that case instead of claiming zero MEV."
+        ],
+        "orderveil": "protected path + blind front-leg experiment"
+      },
+      "deterministic": {
+        "title": "Deterministic ordering and 20 ms ticks",
+        "body": [
+          "Ordering happens per tick over a frozen input set. In the General segment transactions are sorted by effective fee rate, and ties are broken by H(txHash ‖ salt). The tick length is an engineering target of 20 ms, to be validated at P50/P99 on real TEE, networking and storage.",
+          "Orderveil fixes the parts the proposal leaves open in a versioned ruleset: SHA-256 as H, ascending byte order for ties, a salt derived from the seed, parent SubBlock hash and tick, and preserved per-sender nonce order. Changing any of them changes the ruleset version."
+        ],
+        "orderveil": "pure JS engine with tests for reproducibility"
+      },
+      "backruns": {
+        "title": "Opt-in disclosure and after-ref backruns",
+        "body": [
+          "Users can authorize disclosure. The default hint is the complete unsigned transaction body, published simultaneously to all subscribers, while the signature stays inside the TEE. Inclusion is delayed by 5 ticks, giving searchers about 100 ms to simulate and submit.",
+          "Searchers reference the target through a Gateway-generated targetCommitment and may only be placed immediately after it (after-ref). There is no before-ref. Candidates compete on committed tips, and the value can be returned to order flow."
+        ],
+        "orderveil": "hint stream, commitments, validity checks and tip competition"
+      },
+      "subblocks": {
+        "title": "SubBlock streaming",
+        "body": [
+          "Every SubBlock binds at least gatewayId, workloadId, rulesetVersion, term, slot, tick, parentSubBlockHash, inputCommitment, payloadHash and enclaveSig. The final package may concatenate SubBlocks only in acknowledged order.",
+          "Orderveil produces all of these fields except enclaveSig, which only a real TEE can produce. Experiment records carry a separate local simulationSignature that is never presented as TEE proof."
+        ],
+        "orderveil": "one SubBlock per logical tick, chained by parent hash"
+      },
+      "auditing": {
+        "title": "Replayable auditing",
+        "body": [
+          "The proposal keeps three public facts: allowed workloads, the enclave key each Gateway uses this epoch, and which ordering inputs and rules produced the final block. Deterministic replay recomputes input commitments, rulesets, payloadHash and salt-dependent results to detect ordering violations or fabricated outputs.",
+          "Orderveil's replay tool re-derives inputs from the recorded parameters, re-runs ordering and AMM execution, and compares every commitment. Tampering with a transaction, the salt, the ordering result or an input commitment makes replay fail."
+        ],
+        "orderveil": "export → import → replay in the Playground"
+      }
+    },
+    "arch": {
+      "users": "Users",
+      "usersSub": "wallets, dApps",
+      "gateway": "TEE Gateway (proposal)",
+      "gatewaySub": "Orderveil: simulated",
+      "parts": {
+        "ingress": {
+          "title": "Encrypted ingress",
+          "out": "receipts, input commitments"
+        },
+        "classifier": {
+          "title": "Classifier",
+          "out": "protected / opt-in"
+        },
+        "ordering": {
+          "title": "Ordering engine",
+          "out": "ordered payload"
+        },
+        "subblock": {
+          "title": "SubBlock generator",
+          "out": "payloadHash (+enclaveSig)"
+        },
+        "packager": {
+          "title": "Block packager",
+          "out": "block package"
+        }
+      },
+      "validator": "Validator",
+      "validatorSub": "verifies, signs, proposes",
+      "chain": "Chain",
+      "chainSub": "on-chain observation",
+      "caption": "Simplified from the proposal's §03 architecture and §3.1 component table. enclaveSig is produced only by a real TEE and is absent from Orderveil."
+    },
+    "ticks": {
+      "backrun": "After-ref",
+      "caption": "Logical timeline. A protected transaction arriving in tick 1 is ordered in tick 1. An opt-in transaction arriving in tick 1 is disclosed immediately and included in tick 6; backruns submitted during ticks 2–5 are placed right after it.",
+      "cells": {
+        "inc": "included",
+        "disc": "hint",
+        "win": "window",
+        "sub": "submit",
+        "after": "after"
+      }
+    },
+    "mapping": {
+      "title": "NewL1 technology mapping",
+      "subtitle": "Each NewL1 concept, the proposal's description, and what Orderveil actually implements today. “Planned” is never written as “implemented”.",
+      "status": {
+        "simulated": "Simulated",
+        "simplified": "Simplified",
+        "notImplemented": "Not implemented"
+      },
+      "statusHelp": {
+        "simulated": "local model, tested",
+        "simplified": "documented simplifications",
+        "notImplemented": "described only"
+      },
+      "cols": {
+        "official": "Proposal",
+        "impl": "Orderveil",
+        "assumptions": "Model assumptions",
+        "missing": "Not implemented"
+      },
+      "try": "Try it",
+      "rows": {
+        "teeGateway": {
+          "concept": "TEE Gateway",
+          "official": "Attestable ordering and packaging service in a VM-based TEE, primary + standby per validator.",
+          "impl": "Gateway architecture simulation: ingress, classifier, ordering, SubBlocks, packaging as pure functions.",
+          "assumptions": "Single gateway, single term and slot, no failover, no network.",
+          "missing": "TEE execution, RA-TLS, standby sync, failover, encrypted WAL."
+        },
+        "privateDefault": {
+          "concept": "Private by default",
+          "official": "Protected transactions stay hidden from operators, validators and searchers before ordering.",
+          "impl": "Protected order flow: no hint, no commitment, cannot be referenced; tests check searcher views for leaks.",
+          "assumptions": "Privacy is an information boundary in code, not encryption.",
+          "missing": "Actual encryption and confidential execution."
+        },
+        "deterministic": {
+          "concept": "Deterministic ordering",
+          "official": "Sort by effective fee rate; break ties using H(txHash ‖ salt).",
+          "impl": "JavaScript ordering engine with a versioned ruleset and reproducibility tests.",
+          "assumptions": "H = SHA-256; ties ascending; nonce order preserved; lanes and guaranteed-inclusion tail omitted.",
+          "missing": "Lane segments, atomic multi-tx user bundles beyond backruns, guaranteed-inclusion tail."
+        },
+        "tick": {
+          "concept": "20 ms tick",
+          "official": "Engineering target; validate P50/P99 on real hardware.",
+          "impl": "Logical tick simulator with tick index, frozen set, ordering and output batch.",
+          "assumptions": "Logical time only; nothing is timed.",
+          "missing": "Any real latency measurement."
+        },
+        "optin": {
+          "concept": "Opt-in disclosure",
+          "official": "Authorize the unsigned body (or a summary) as a hint; default delay 5 ticks.",
+          "impl": "Authorized hint model with targetCommitment and a 5-tick window.",
+          "assumptions": "Full-body hints only; searchers value the target on the state at disclosure.",
+          "missing": "Field-level summaries, D-lagged execution state, gw_* RPC interfaces."
+        },
+        "afterRef": {
+          "concept": "After-ref backrun",
+          "official": "Only immediately after the target; no before-ref; compete on committed tips.",
+          "impl": "Backrun ordering experiment with validity checks, tip competition and atomic exclusion.",
+          "assumptions": "One backrun per target; a backrun is excluded if its target or itself reverts.",
+          "missing": "Plugin-based scoring, share-of-profit pricing."
+        },
+        "subblock": {
+          "concept": "SubBlock streaming",
+          "official": "Each SubBlock binds slot, tick, parent hash, commitments and enclaveSig.",
+          "impl": "SubBlock visualization with all fields except enclaveSig.",
+          "assumptions": "SHA-256 over canonical JSON; empty ticks still emit SubBlocks.",
+          "missing": "enclaveSig, validator ACKs, block package proof summary."
+        },
+        "inputCommitment": {
+          "concept": "Input commitment",
+          "official": "Frozen-set commitments enable post-hoc replay.",
+          "impl": "Reproducible audit records with input commitment, payload hash and ruleset version per tick.",
+          "assumptions": "Commitment = SHA-256 over sorted hashes with domain separation.",
+          "missing": "Receipts and encrypted WAL commitments."
+        },
+        "replay": {
+          "concept": "Replayability",
+          "official": "Recompute commitments, rulesets, payloadHash and salt-dependent results.",
+          "impl": "Replay verification tool: export, import, re-run, compare; Replay Passed / Failed.",
+          "assumptions": "Records are self-contained JSON with a local integrity signature.",
+          "missing": "Cross-platform test vectors against a real gateway."
+        },
+        "attestation": {
+          "concept": "Attestation",
+          "official": "Quotes bind short-lived enclave keys to allowed workloads; per-tick compact signatures.",
+          "impl": "Not implemented. Orderveil never labels its signature as attestation.",
+          "assumptions": "—",
+          "missing": "Everything: TDX/SEV-SNP quotes, workload measurements, key rotation."
+        }
+      }
+    }
+  },
+  "docs": {
+    "eyebrow": "Documentation",
+    "navLabel": "Documentation sections",
+    "nav": {
+      "introduction": "Introduction",
+      "newl1-research": "NewL1 Research",
+      "architecture": "Architecture",
+      "simulation-model": "Simulation Model",
+      "amm-math": "AMM Mathematics",
+      "ordering-rules": "Ordering Rules",
+      "audit-records": "Audit Records",
+      "limitations": "Limitations",
+      "roadmap": "Roadmap"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "lead": "Orderveil Gateway Lab is a research platform for protected transaction ordering and MEV. Version 1 runs entirely in your browser.",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The project starts from BNB Chain NewL1's public TEE Gateway proposal and turns its ordering rules into experiments: a deterministic ordering engine, a logical tick and SubBlock simulator, a constant-product AMM with an adversary, and an audit record that anyone can replay."
+          },
+          {
+            "type": "h",
+            "text": "Three kinds of results"
+          },
+          {
+            "type": "table",
+            "head": [
+              "Kind",
+              "Meaning",
+              "In v1"
+            ],
+            "rows": [
+              [
+                "Simulation",
+                "Local mathematical model and ordering experiment",
+                "Everything on this site"
+              ],
+              [
+                "Testnet experiment",
+                "Real testnet transactions and contract checks",
+                "Optional: publish an experiment's commitment to BSC Testnet from the Audit tab"
+              ],
+              [
+                "Verified native integration",
+                "Actually connected to and verified on NewL1",
+                "Not available"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Where to start"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Playground — run one trade under Public, Protected and Opt-in ordering.",
+              "Network — follow an experiment through the gateway topology.",
+              "Technology — the proposal, mapped to what is and isn't implemented.",
+              "Audit Records — export an experiment and replay it."
+            ]
+          },
+          {
+            "type": "note",
+            "text": "Orderveil is an independent research project inspired by BNB Chain NewL1's public technical proposals. It is not affiliated with or endorsed by BNB Chain. The reserved token name Orderveil (ORVL) is not deployed and is not a BNB Chain or NewL1 token."
+          }
+        ]
+      },
+      "newl1-research": {
+        "title": "NewL1 Research",
+        "lead": "The official sources Orderveil is built on, read on 2026-10-20.",
+        "blocks": [
+          {
+            "type": "refs"
+          },
+          {
+            "type": "h",
+            "text": "Key points used by Orderveil"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Core proposal: the Gateway is an attestable ordering and packaging service, not a new consensus role; the validator retains final signing authority.",
+              "Private by default; MEV exposed only within user-authorized boundaries.",
+              "Protected path: no hints, no after-ref references, enter the next available tick.",
+              "Opt-in delayed path: unsigned body or summary as hint, default delay 5 ticks (≈100 ms).",
+              "General ordering: effective fee rate; ties by H(txHash ‖ salt).",
+              "After-ref: only immediately after the target; no before-ref; compete on committed tips.",
+              "SubBlocks bind gatewayId, workloadId, rulesetVersion, term, slot, tick, parentSubBlockHash, inputCommitment, payloadHash, enclaveSig.",
+              "Replay data: frozen-set commitments, rule parameters, random salt, final order.",
+              "Residual risk acknowledged: a blindly submitted high-fee front leg may coincidentally succeed."
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Details the proposal does not specify"
+          },
+          {
+            "type": "p",
+            "text": "Hash function for H, byte encoding, salt source, refund share and candidate scoring beyond committed tips are not defined in the public text. Orderveil fills them with explicit, versioned simulation choices and never presents them as protocol facts. See docs/NEWL1_RESEARCH.md in the repository for the full section-by-section mapping."
+          }
+        ]
+      },
+      "architecture": {
+        "title": "Architecture",
+        "lead": "Pure-JavaScript simulation modules with React on top. Algorithms have no UI dependency and are tested on their own.",
+        "blocks": [
+          {
+            "type": "diagram",
+            "name": "arch"
+          },
+          {
+            "type": "h",
+            "text": "Modules"
+          },
+          {
+            "type": "table",
+            "head": [
+              "Module",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "simulation/amm",
+                "Constant-product math, sequential execution, optimal arbitrage"
+              ],
+              [
+                "simulation/ordering",
+                "Transactions, bundles, ruleset, classification, ordering, SubBlocks"
+              ],
+              [
+                "simulation/mev",
+                "Parameters, scenario generation, metrics, mode comparison"
+              ],
+              [
+                "simulation/replay",
+                "Experiment records, signatures, replay verification"
+              ],
+              [
+                "components/topology",
+                "React Flow graph driven by engine output"
+              ],
+              [
+                "pages",
+                "Home, Technology, Playground, Network, Docs"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Data flow"
+          },
+          {
+            "type": "code",
+            "text": "params ──normalize──▶ scenario inputs (txs + bundles, seeded)\n        ──runGateway / orderPublicBlock──▶ ticks, SubBlocks, final order\n        ──executeOrder──▶ AMM steps, balances, final pool\n        ──buildExperimentRecord──▶ JSON record ──replayExperiment──▶ Passed / Failed"
+          }
+        ]
+      },
+      "simulation-model": {
+        "title": "Simulation Model",
+        "lead": "How a Playground experiment is constructed. Every value is derived from the inputs and the seed.",
+        "blocks": [
+          {
+            "type": "h",
+            "text": "Actors"
+          },
+          {
+            "type": "list",
+            "items": [
+              "User — one swap, arrival tick 1, minimum output from the slippage tolerance applied to a quote on the initial pool.",
+              "Other order flow — N swaps whose direction, size (0.05–0.5% of the input reserve), fee rate (0.5–2.5 gwei) and arrival tick (0–7) come from SHA-256 draws on the seed.",
+              "Adversary — depends on the mode (below).",
+              "Searchers — opt-in only; each computes the optimal backrun and commits a seeded share (30–90%) of the expected net profit as a tip."
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Modes"
+          },
+          {
+            "type": "table",
+            "head": [
+              "Mode",
+              "Visibility",
+              "Adversary behaviour"
+            ],
+            "rows": [
+              [
+                "Public",
+                "Everything visible; one block ordered by fee",
+                "Front-run at a higher fee, back-run at a slightly lower fee, sells the full position"
+              ],
+              [
+                "Protected",
+                "Nothing disclosed",
+                "Blind high-fee trade in the same tick, direction guessed; exits next tick"
+              ],
+              [
+                "Opt-in",
+                "Unsigned body disclosed at arrival; inclusion after 5 ticks",
+                "Hint-informed ordinary trade in an earlier tick; searchers compete for the after-ref slot"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Measuring MEV-related loss"
+          },
+          {
+            "type": "p",
+            "text": "Each mode is run twice: as configured, and with the adversary removed. MEV-related loss is the difference in your output between the two runs, valued at the reference price. Price impact caused by other users therefore isn't counted as MEV. A negative value means the adversary's trade happened to improve your price."
+          },
+          {
+            "type": "note",
+            "text": "Defaults are examples chosen to make each effect visible. A different seed can make the protected path look worse than the public one. That is a property of the model, and the reason the site never claims guaranteed protection."
+          }
+        ]
+      },
+      "amm-math": {
+        "title": "AMM Mathematics",
+        "lead": "Uniswap-V2-style constant product with an input-side fee, computed in 18-decimal integers.",
+        "blocks": [
+          {
+            "type": "code",
+            "text": "x · y = k\neffectiveIn = amountIn · (10000 − feeBps) / 10000\namountOut   = reserveOut · effectiveIn / (reserveIn + effectiveIn)      (floor)\nreserveIn'  = reserveIn + amountIn          # fee stays in the pool, k grows\nreserveOut' = reserveOut − amountOut"
+          },
+          {
+            "type": "p",
+            "text": "Amounts are BigInt in the smallest unit; nothing depends on floating-point. Conversions to decimals happen only for display and charts."
+          },
+          {
+            "type": "h",
+            "text": "Slippage and failure"
+          },
+          {
+            "type": "code",
+            "text": "minOut = quote(initialPool, amountIn) · (10000 − slippageBps) / 10000\nif amountOut < minOut → reverted, pool unchanged, gas still paid"
+          },
+          {
+            "type": "h",
+            "text": "Optimal backrun (opt-in searchers)"
+          },
+          {
+            "type": "code",
+            "text": "reference price P = Rq0 / Rb0,  g = 1 − fee\npool overpriced:  x* = (√(g·Rb·Rq / P) − Rb) / g      sell BASE\npool underpriced: y* = (√(g·Rb·Rq·P) − Rq) / g      buy BASE with QUOTE"
+          },
+          {
+            "type": "h",
+            "text": "Profit accounting"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Gross trading P&L = change in token balances valued at the reference price (AMM fees are already inside it).",
+              "AMM fees paid are reported separately for transparency.",
+              "Gas = gas units × effective fee rate (BNB), converted at the reference price.",
+              "Net = gross − gas (− committed tip for searchers)."
+            ]
+          }
+        ]
+      },
+      "ordering-rules": {
+        "title": "Ordering Rules",
+        "lead": "Ruleset orderveil-sim/ruleset/0.1.0. Any behavioural change bumps the version.",
+        "blocks": [
+          {
+            "type": "diagram",
+            "name": "ticks"
+          },
+          {
+            "type": "table",
+            "head": [
+              "Rule",
+              "Definition",
+              "Origin"
+            ],
+            "rows": [
+              [
+                "Tick",
+                "Logical 20 ms; tick t covers [20t, 20t+20) ms",
+                "Proposal target"
+              ],
+              [
+                "Protected inclusion",
+                "Frozen in its arrival tick",
+                "Proposal"
+              ],
+              [
+                "Opt-in inclusion",
+                "arrivalTick + 5",
+                "Proposal"
+              ],
+              [
+                "General order",
+                "effectiveFeeRate descending",
+                "Proposal"
+              ],
+              [
+                "Tie-break",
+                "SHA-256(txHash ‖ salt) ascending, raw 32-byte concatenation",
+                "Proposal (H); hash = Orderveil"
+              ],
+              [
+                "Nonce",
+                "Per-sender nonce order preserved (price-and-nonce merge)",
+                "Orderveil"
+              ],
+              [
+                "Salt",
+                "SHA-256(\"ORVL/salt/v1|\" ‖ seedHash ‖ parentSubBlockHash ‖ u64be(tick))",
+                "Orderveil"
+              ],
+              [
+                "After-ref",
+                "Immediately after target; best committedTip; ties SHA-256(bundleHash ‖ salt); max 1 per target",
+                "Proposal + Orderveil limit"
+              ],
+              [
+                "Before-ref",
+                "Rejected",
+                "Proposal"
+              ],
+              [
+                "Protected targets",
+                "Bundles referencing them are rejected",
+                "Proposal"
+              ]
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Bundle validity checks (in order)"
+          },
+          {
+            "type": "list",
+            "items": [
+              "beforeRef present → rejected_before_ref",
+              "no afterRef → rejected_no_target",
+              "afterRef is a protected tx hash or its derived commitment → rejected_protected_target",
+              "afterRef matches no published hint → rejected_unknown_target",
+              "no member transactions → rejected_empty",
+              "arrived before the hint was disclosed → rejected_before_disclosure",
+              "arrived at or after the target's inclusion tick → rejected_late",
+              "validity window doesn't cover the inclusion tick → rejected_validity_window",
+              "committedTip below floor → rejected_tip_floor",
+              "at execution: target or member reverted → whole bundle excluded"
+            ]
+          }
+        ]
+      },
+      "audit-records": {
+        "title": "Audit Records",
+        "lead": "Every experiment can be exported as a self-contained JSON record and replayed by anyone.",
+        "blocks": [
+          {
+            "type": "h",
+            "text": "Record contents"
+          },
+          {
+            "type": "list",
+            "items": [
+              "schema: orderveil.experiment/v1, classification: simulation",
+              "experimentId = first 8 bytes of SHA-256 over ruleset version, parameters and inputs",
+              "ruleset: the full parameter object",
+              "config.params: normalized parameters including seed",
+              "inputs: every transaction and bundle with its content hash",
+              "outputs: per-tick salt, frozen set, ordered entries, inputCommitment, payloadHash, parent and SubBlock hash; final order; AMM execution with executionHash",
+              "simulationSignature: ed25519 over the record digest with a fresh local key"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Canonical hashing"
+          },
+          {
+            "type": "code",
+            "text": "canonical JSON = sorted keys, no whitespace, BigInt → decimal string\ntxHash          = SHA-256(canonical({domain:\"ORVL/tx/v1\", …body}))\ninputCommitment = SHA-256(\"ORVL/input/v1|\" ‖ u64(tick) ‖ u64(n) ‖ sorted txHashes ‖ \"|bundles|\" ‖ u64(m) ‖ sorted bundleHashes)\npayloadHash     = SHA-256(canonical({domain:\"ORVL/payload/v1\", entries}))\nsubBlockHash    = SHA-256(canonical({domain:\"ORVL/subblock/v1\", …header}))"
+          },
+          {
+            "type": "h",
+            "text": "What replay checks"
+          },
+          {
+            "type": "p",
+            "text": "Replay recomputes rather than compares. It verifies every content hash, regenerates the inputs from the parameters and seed, re-runs the ordering engine and the AMM, and compares each tick's salt, frozen set, input commitment, ordering, payload hash and SubBlock chain, plus bundle decisions, hints, final order and execution. Finally it verifies the local signature. Tampering with a transaction, the salt, the seed, the ordering or a commitment fails replay."
+          },
+          {
+            "type": "note",
+            "text": "createdAt is informational and excluded from all hashes. The simulationSignature only shows the record wasn't modified after export. It is not a TEE attestation and not an enclaveSig."
+          },
+          {
+            "type": "h",
+            "text": "On-chain commitments (BSC Testnet)"
+          },
+          {
+            "type": "p",
+            "text": "From the Audit tab, a connected wallet can call OrderveilCommitments.commit(recordDigest, experimentId, finalSubBlockHash, executionHash, rulesetVersion) on BSC Testnet. Each digest can be committed once. Anyone who imports a record can read its commitment without a wallet: replay recomputes the digest, then the site checks that the on-chain fields match the record."
+          },
+          {
+            "type": "note",
+            "text": "A commitment proves the record existed no later than its block. It is a Testnet Experiment artifact: it does not mean BSC ordering is controlled by Orderveil, and it is not a NewL1 or TEE proof."
+          }
+        ]
+      },
+      "limitations": {
+        "title": "Limitations",
+        "lead": "What this version does not do, stated plainly.",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "No TEE, no attestation, no enclaveSig, no RA-TLS. Privacy is an information boundary in code, not encryption.",
+              "No connection to NewL1. BSC Testnet is used only to store optional audit commitments; experiment transactions are never sent to any chain.",
+              "Ticks are logical; 20 ms is the proposal's target, not a measured latency.",
+              "Single pool, single gateway, single slot. No lanes, no guaranteed-inclusion tail, no failover.",
+              "Searchers value backruns on the pool state at disclosure, not on D-lagged executed state.",
+              "The external price is fixed at the initial pool price; there is no CEX price process.",
+              "Attackers follow fixed strategies; there is no strategic competition between multiple attackers.",
+              "The opt-in “informed front leg” finding comes from this simplified model and its full-body hints. The proposal also allows field-level summaries and further policy that may change the outcome.",
+              "Gas units and refund shares are assumptions.",
+              "Results are model outputs. They do not predict real-world MEV and are not financial advice."
+            ]
+          }
+        ]
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "lead": "Planned work, kept separate from what exists today.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "Phase",
+              "Scope",
+              "Status"
+            ],
+            "rows": [
+              [
+                "Phase 1 · Local research platform",
+                "Website, i18n, topology, AMM simulator, ordering engine, ticks, SubBlocks, audit records, replay",
+                "This version"
+              ],
+              [
+                "Phase 2 · BSC Testnet (chain 97)",
+                "Wallet connection, RPC adapter, testnet contract, submitting experiment commitments, explorer links",
+                "Live: wallet connection, OrderveilCommitments contract, commitment publishing and on-chain verification"
+              ],
+              [
+                "Phase 3 · NewL1 integration",
+                "Study the real RPC and Gateway interfaces once public, verify real ordering, measure performance, update the SDK",
+                "Depends on NewL1 public test environments"
+              ]
+            ]
+          },
+          {
+            "type": "note",
+            "text": "Publishing an experiment commitment to BSC Testnet would prove the commitment existed at a point in time. It would not mean that BSC's transaction ordering is controlled by Orderveil."
+          },
+          {
+            "type": "h",
+            "text": "Token"
+          },
+          {
+            "type": "p",
+            "text": "Orderveil (ORVL) is a reserved name for a possible future project token. Nothing is deployed, sold or distributed, there is no tokenomics, and it has no relation to BNB, BNB Chain or NewL1."
+          }
+        ]
+      }
+    }
+  },
+  "wallet": {
+    "faucet": "Get test BNB (faucet)",
+    "wrongNetwork": "Wrong network",
+    "disclaimer": "Orderveil only asks your wallet to sign BSC Testnet transactions that you start yourself (audit commitments). It never requests mainnet funds or message signatures."
+  },
+  "onchain": {
+    "title": "On-chain commitment",
+    "badge": "Testnet Experiment",
+    "chainId": "chain {{id}}",
+    "contract": "Contract",
+    "status": "Status",
+    "checking": "Checking…",
+    "readFailed": "Could not read from RPC",
+    "retry": "Retry",
+    "committed": "Committed",
+    "notCommitted": "Not committed yet",
+    "block": "Block",
+    "time": "Block time",
+    "submitter": "Submitted by",
+    "contentCheck": "On-chain fields vs record",
+    "matches": "match",
+    "mismatch": "do not match",
+    "commit": "Commit to BSC Testnet",
+    "confirmInWallet": "Confirm in your wallet…",
+    "waiting": "Waiting for confirmation…",
+    "tx": "Transaction",
+    "confirmed": "confirmed",
+    "blockers": {
+      "connect": "Connect a wallet to publish this commitment. Reading the status needs no wallet.",
+      "switch": "Switch your wallet to {{chain}} to publish."
+    },
+    "errors": {
+      "rejected": "You rejected the transaction in your wallet.",
+      "alreadyCommitted": "This record digest is already committed on-chain.",
+      "reverted": "The contract rejected the transaction.",
+      "insufficientFunds": "Not enough test BNB for gas.",
+      "wrongChain": "Your wallet is on a different network.",
+      "receiptFailed": "The transaction failed or could not be confirmed.",
+      "unknown": "The transaction could not be sent."
+    },
+    "notConfigured": "No commitment contract is configured for this deployment yet.",
+    "note": "Publishing stores the record digest, experiment ID, final SubBlock hash, execution hash and ruleset version in OrderveilCommitments. It proves this exact record existed no later than that block. It does not mean BSC's transaction ordering is controlled by Orderveil, and the simulation itself still runs locally."
+  },
+  "social": {
+    "followX": "Follow Orderveil on X",
+    "followOn": "Follow on X"
+  }
+}
